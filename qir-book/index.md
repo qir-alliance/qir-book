@@ -1,4 +1,4 @@
-# QIR Community Documentation
+# Community Documentation
 
 This repo curates conceptual documentation for the QIR specification as well as all the tools in the QIR ecosystem.
 

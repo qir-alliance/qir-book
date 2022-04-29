@@ -1,10 +1,28 @@
-format: jb-article
-root: intro
-sections:
-- file: conceptual
-- file: tutorials
-- file: reference
-- file: _example-content
-  sections:
-  - file: markdown
-  - file: notebooks
+format: jb-book
+root: index
+parts:
+- caption: Tutorials
+  chapters:
+  - file: tutorials
+
+- caption: Concepts
+  chapters:
+  - file: conceptual
+
+- caption: Reference
+  chapters:
+  - file: reference/reference
+  - file: reference/glossary
+  - file: reference/example-content
+    sections:
+    - file: reference/markdown
+    - file: reference/notebooks
+
+- caption: About QIR
+  chapters:
+  - url: http://qir-alliance.org/
+    title: QIR Alliance website
+  - file: community-projects
+  - file: cite
+  - file: reference/_changelog
+    title: Change log
