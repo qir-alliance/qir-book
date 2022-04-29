@@ -1,7 +1,10 @@
 format: jb-article
 root: intro
 sections:
-- file: content
+- file: conceptual
+- file: tutorials
+- file: reference
+- file: _example-content
   sections:
   - file: markdown
   - file: notebooks
