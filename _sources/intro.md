@@ -1,7 +1,5 @@
-Welcome to your Jupyter Book
-============================
+# QIR Community Documentation
 
-This is a small sample book to give you a feel for how book content is
-structured.
+This repo curates conceptual documentation for the QIR specification as well as all the tools in the QIR ecosystem.
 
-Check out the content pages bundled with this sample book to get started.
+If you have any examples, projects, or ideas on what you might like to see here, please open an issue or pull request.
