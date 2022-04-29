@@ -1,4 +1,7 @@
+# Tutorials
+
 __Narrated examples of using QIR as a part of some workflow.__
+
 - Setting up the environment and recommendations (e.g., qcor) 
 - Maintaining a simple example throughout each component to demonstrate functionality and features (e.g., passes in qat)
 - Tutorial: qir generation from Q#
