@@ -1,0 +1,9 @@
+name: qir-book
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib
+  - numpy
+  - pip
+  - pip:
+    - jupyter-book
