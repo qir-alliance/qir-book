@@ -1,1 +1,0 @@
-# qir-book
