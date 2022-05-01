@@ -6,4 +6,5 @@ dependencies:
   - numpy
   - pip
   - pip:
+    - sphinx-design
     - jupyter-book
