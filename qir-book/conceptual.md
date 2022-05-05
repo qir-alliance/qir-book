@@ -7,8 +7,9 @@ __What is QIR, why we need it, where it is used, and how it is used.__
 
 __Motivations for QIR Community/ Alliance?__
 - interoperability opens doors to cross-field problem-solving such as error correction 
-- Resource estimation
-__Hetrogenious Data at IR__
+- Resource estimation.
+  
+__Hetrogenious Data in IR__
 - QRAM model for circuit-based quantum computation
 
 __Why IR?__
