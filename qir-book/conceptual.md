@@ -29,7 +29,7 @@ __Why LLVM?__
 __pyqir__ 
 - Emission, Execution, and analysis (py-based PL)= pyqir 
 - Pyqir matches the code to the defined profiles in QIR and generates .ll
-- analysis: resource estimation
+- analysis: resource estimation?
 - includes/skip the steps for QIR spec and qcor, for py-based languages 
 - where LLVM dialect meets/compiles the higher-level instruction to executables 
 
