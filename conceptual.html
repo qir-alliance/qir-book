@@ -284,46 +284,47 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="what-is-qir">
 <h1>What is QIR?<a class="headerlink" href="#what-is-qir" title="Permalink to this headline">¶</a></h1>
+<p><strong>What is QIR, why we need it, where it is used, and how it is used.</strong></p>
 <ul class="simple">
-<li><p>What is QIR, why we need it, where it is used, and how it is used.</p></li>
-<li><p>“Formal specifications embedded in llvm…, it expresses quantum specific operations as declared function calls on opaque data types…” {cite}<code class="docutils literal notranslate"><span class="pre">mlirTN</span></code></p></li>
-<li><p>Using a conceptual example, showing what each component of the ecosystem does and how they can be applied to users needs.
-<img alt="qirecosys-overview" src="_images/qirecosys.png" />
-<strong>What is QIR, why we need it, where it is used, and how it is used.</strong></p></li>
+<li><p>“Formal specifications embedded in LLVM…, it expresses quantum specific operations as declared function calls on opaque data types…” {\cite}<code class="docutils literal notranslate"><span class="pre">mlirTN</span></code></p></li>
+<li><p>Using a conceptual example, showing what each component of the ecosystem does and how they can be applied to users’ needs
+<img alt="qirecosys-overview" src="_images/qirecosys.png" /></p></li>
 </ul>
 <p><strong>Motivations for QIR Community/ Alliance?</strong></p>
 <ul class="simple">
-<li><p>interoperability opens doors to cross-field problem-solving such as error correction</p></li>
-<li><p>Resource estimation.</p></li>
+<li><p>What is interoperability?</p></li>
+<li><p>Interoperability opens doors to cross-fields problem-solving such as error correction</p></li>
 </ul>
-<p><strong>Hetrogenious Data in IR</strong></p>
+<p><strong>Heterogeneous Data in IR</strong></p>
 <ul class="simple">
 <li><p>QRAM model for circuit-based quantum computation</p></li>
+<li><p>How is QIR different from other quantum IRs?</p></li>
 </ul>
 <p><strong>Why IR?</strong></p>
 <ul class="simple">
-<li><p>interoperability with specific backends profiles</p></li>
+<li><p>interoperability with specific backends profiles (1:m)</p></li>
 <li><p>HPC backends</p></li>
-<li><p>llvm years of R&amp;D</p></li>
 <li><p>Optimization passes to classical and quantum code
 {cite}<code class="docutils literal notranslate"><span class="pre">mlirTN</span></code></p></li>
 </ul>
 <p><strong>Why LLVM?</strong></p>
 <ul class="simple">
+<li><p>LLVM years of R&amp;D</p></li>
+<li><p>MLIR quantum dialect</p></li>
+<li><p>cqor compiler is in LLVM</p></li>
 <li><p>qir spec is in LLVM dialect</p></li>
 <li><p>“QIR is embedded in LLVM IR”</p></li>
-<li><p>cqor compiler is in LLVM</p></li>
-<li><p>MLIR quantum dialect</p></li>
-<li><p>C++ and Clang for quantum function expression at the same level as classical information{cite}<code class="docutils literal notranslate"><span class="pre">mccaskey2021extending</span></code></p></li>
+<li><p>C++ and Clang for quantum function expression to be at the same level as classical information at IR{cite}<code class="docutils literal notranslate"><span class="pre">mccaskey2021extending</span></code></p></li>
 </ul>
 <p><strong>pyqir</strong></p>
 <ul class="simple">
-<li><p>Emission, Execution and analysis (py-based PL)= pyqir
-(analysis: resource estimation)- Pyqir matches the profile to QIR and generates .ll</p></li>
-<li><p>includes/skip the steps for QIR spec and qcor use for py-based languages.</p></li>
-<li><p>where llvm dialect meets/compiles the higher level instruction to executables</p></li>
+<li><p>Emission, Execution, and analysis (py-based PL)= pyqir</p></li>
+<li><p>Pyqir matches the code to the defined profiles in QIR and generates .ll</p></li>
+<li><p>analysis: resource estimation?</p></li>
+<li><p>includes/skip the steps for QIR spec and qcor, for py-based languages</p></li>
+<li><p>where LLVM dialect meets/compiles the higher-level instruction to executables</p></li>
 </ul>
-<p><strong>QIR Spec</strong></p>
+<p><strong>qir_spec</strong></p>
 <ul class="simple">
 <li><p>Formalization of Quantum Operation in LLVM</p></li>
 <li><p>Type Abstraction and Formalization</p></li>
@@ -333,7 +334,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>qcor</strong></p>
 <ul class="simple">
 <li><p>Movements between abstraction levels (XACC and MLIR dialect)</p></li>
-<li><p>“qcor translates quantum kernels ultimately to the</p></li>
 <li><p>MLIR –&gt; quantum instructions = stand-alone DSL{cite}<code class="docutils literal notranslate"><span class="pre">mccaskey2021extending</span></code></p></li>
 </ul>
 </div>
