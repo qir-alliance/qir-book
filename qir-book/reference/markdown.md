@@ -66,7 +66,7 @@ Some content {rolename}`and here is my role's content!`
 Again, roles will only work if `rolename` is a valid role's name. For example,
 the `doc` role can be used to refer to another page in your book. You can
 refer directly to another page by its relative path. For example, the
-role syntax `` {doc}`reference` `` will result in: {doc}`reference`.
+role syntax `` {doc}`glossary` `` will result in: {doc}`glossary`.
 
 For more information on writing roles, see the
 [MyST documentation](https://myst-parser.readthedocs.io/).
@@ -75,8 +75,8 @@ For more information on writing roles, see the
 ### Adding a citation
 
 You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
+the following syntax: `` {cite}`mlirTN` `` will render like
+this: {cite}`mlirTN`.
 
 Moreoever, you can insert a bibliography into your page with this syntax:
 The `{bibliography}` directive must be used for all the `{cite}` roles to
