@@ -11,18 +11,20 @@ parts:
 
 - caption: Reference
   chapters:
-  - file: reference/reference
+  - file: project-gallery
   - file: reference/glossary
+  - url: http://qir-alliance.org/
+    title: QIR Alliance Organization
   - file: reference/example-content
+    title: "TEMP: Example Content"
     sections:
     - file: reference/markdown
     - file: reference/notebooks
 
-- caption: About QIR
+- caption: About QIR book
   chapters:
-  - url: http://qir-alliance.org/
-    title: QIR Alliance website
-  - file: community-projects
-  - file: cite
   - file: reference/_changelog
-    title: Change log
+  - file: reference/_contributing
+    title: Contribute
+  - file: cite
+    title: Cite
