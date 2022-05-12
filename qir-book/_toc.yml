@@ -8,23 +8,24 @@ parts:
 - caption: Concepts
   chapters:
   - file: conceptual
+  - file: reference/glossary
 
 - caption: Reference
   chapters:
   - file: project-gallery
-  - file: reference/glossary
   - url: http://qir-alliance.org/
     title: QIR Alliance Organization
-  - file: reference/example-content
-    title: "TEMP: Example Content"
-    sections:
-    - file: reference/markdown
-    - file: reference/notebooks
 
 - caption: About QIR book
   chapters:
-  - file: reference/_changelog
+  - file: reference/_readme
+    title: Why this book
+  - file: tools
+    title: QIR book toolchain
+    sections:
+    - file: reference/markdown
+    - file: reference/notebooks
   - file: reference/_contributing
-    title: Contribute
   - file: cite
-    title: Cite
+  - file: reference/_changelog
+  #- file: genindex
