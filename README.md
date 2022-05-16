@@ -1,6 +1,6 @@
-# qir-book
+# <img src="https://github.com/crazy4pi314/qir-book/blob/main/qir-book/logo.svg?raw=true" />
 
-To build the docs locally, create a python environment with either the conda `environment.yml` or the `requirements.txt`.
-Then run `jupyter-book build ./qir-book` from the root of the project and it should run the notebooks and build the html version of the book that you can view from `./qir-book/_build/html/index.html`.
+QIR Book is open-source documentation and examples for the quantum computing intermediate representation [QIR](http://qir-alliance.org/).
+## Contribute or improve the book
 
-## Why this book?
+Notice a bug in the sample code? A typo in the text? Want to add a cool feature so that others can enjoy the improvements to QIR Book? Check out the [QIR Book Contributor's Guide](https://jupyterbook.org/contribute/intro.html). We'd love your help!

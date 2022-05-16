@@ -50,6 +50,3 @@ And last but not least:
 
 Your contributions to open source, large or small, make great projects like this possible.
 Thank you for taking the time to contribute.
-
-## Jupyter Book
-- https://jupyterbook.org/en/stable/content/content-blocks.html?highlight=glossary#special-content-blocks

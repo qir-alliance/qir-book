@@ -18,8 +18,6 @@ parts:
 
 - caption: About QIR book
   chapters:
-  - file: reference/_readme
-    title: Why this book
   - file: tools
     title: QIR book toolchain
     sections:
