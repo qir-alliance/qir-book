@@ -6,54 +6,54 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What is QIR?</title>
+    <title>QIR generation with Q#</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Glossary" href="reference/glossary.html" />
-    <link rel="prev" title="Tutorials" href="tutorials.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="QIR with Python" href="qir-python.html" />
+    <link rel="prev" title="Community Documentation" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -88,17 +88,17 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo.png" class="logo" alt="logo">
       
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -108,10 +108,30 @@ const thebe_selector_output = ".output, .cell_output"
   Tutorials
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   QIR generation with Q#
+  </a>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials.html">
-   Tutorials
+  <a class="reference internal" href="qir-python.html">
+   QIR with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="qat-optimization.html">
+   Optimizing QIR with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     qat
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualize-qir.html">
+   Visualize QIR programs
   </a>
  </li>
 </ul>
@@ -120,14 +140,24 @@ const thebe_selector_output = ".output, .cell_output"
   Concepts
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../concepts/what-is-qir.html">
    What is QIR?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reference/glossary.html">
+  <a class="reference internal" href="../concepts/why-do-we-need.html">
+   Why do we need it?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../concepts/using-qir.html">
+   How do we use it?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
    Glossary
   </a>
  </li>
@@ -139,7 +169,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="project-gallery.html">
+  <a class="reference internal" href="../project-gallery.html">
    QIR Ecosystem projects
   </a>
  </li>
@@ -155,40 +185,23 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="tools.html">
-   QIR book toolchain
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="reference/markdown.html">
-     Markdown Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="reference/notebooks.html">
-     Content with notebooks
-    </a>
-   </li>
-  </ul>
- </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reference/_contributing.html">
+  <a class="reference internal" href="../reference/_contributing.html">
    Contributing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="cite.html">
+  <a class="reference internal" href="../tools.html">
+   QIR book toolchain
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
    Cite QIR Book
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="reference/_changelog.html">
+  <a class="reference internal" href="../reference/_changelog.html">
    Change Log
   </a>
  </li>
@@ -243,6 +256,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/crazy4pi314/qir-book/main?urlpath=tree/qir-book/tutorials/qir-gen-qsharp.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -282,7 +324,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/crazy4pi314/qir-book/issues/new?title=Issue%20on%20page%20%2Fconceptual.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/crazy4pi314/qir-book/issues/new?title=Issue%20on%20page%20%2Ftutorials/qir-gen-qsharp.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +341,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/crazy4pi314/qir-book/edit/main/qir-book/conceptual.md"
+        <a href="https://github.com/crazy4pi314/qir-book/edit/main/qir-book/tutorials/qir-gen-qsharp.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -327,7 +369,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/conceptual.md"
+        <a href="../_sources/tutorials/qir-gen-qsharp.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -338,7 +380,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -376,7 +418,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What is QIR?</h1>
+                <h1>QIR generation with Q#</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -388,59 +430,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-is-qir">
-<h1>What is QIR?<a class="headerlink" href="#what-is-qir" title="Permalink to this headline">#</a></h1>
-<p><strong>What is QIR, why we need it, where it is used, and how it is used.</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="qir-generation-with-q">
+<h1>QIR generation with Q#<a class="headerlink" href="#qir-generation-with-q" title="Permalink to this headline">#</a></h1>
+<p><em>Tutorials are narrated examples of using QIR as a part of some workflow or with a particular set of tools.</em></p>
 <ul class="simple">
-<li><p>“Formal specifications embedded in LLVM…, it expresses quantum specific operations as declared function calls on opaque data types…” <span id="id1">[<a class="reference internal" href="reference/markdown.html#id8" title="Thien Nguyen and Alexander McCaskey. Enabling retargetable optimizing compilers for quantum accelerators via a multi-level intermediate representation. arXiv preprint arXiv:2109.00506, 2021.">NM21</a>]</span></p></li>
-<li><p>Using a conceptual example, showing what each component of the ecosystem does and how they can be applied to users’ needs
-<img alt="qirecosys-overview" src="_images/qirecosys.png" /></p></li>
-</ul>
-<p><strong>Motivations for QIR Community/ Alliance?</strong></p>
-<ul class="simple">
-<li><p>What is interoperability?</p></li>
-<li><p>Interoperability opens doors to cross-fields problem-solving such as error correction</p></li>
-</ul>
-<p><strong>Heterogeneous Data in IR</strong></p>
-<ul class="simple">
-<li><p>QRAM model for circuit-based quantum computation</p></li>
-<li><p>How is QIR different from other quantum IRs?</p></li>
-</ul>
-<p><strong>Why IR?</strong></p>
-<ul class="simple">
-<li><p>interoperability with specific backends profiles (1:m)</p></li>
-<li><p>HPC backends</p></li>
-<li><p>Optimization passes to classical and quantum code
-<span id="id2">[<a class="reference internal" href="reference/markdown.html#id8" title="Thien Nguyen and Alexander McCaskey. Enabling retargetable optimizing compilers for quantum accelerators via a multi-level intermediate representation. arXiv preprint arXiv:2109.00506, 2021.">NM21</a>]</span></p></li>
-</ul>
-<p><strong>Why LLVM?</strong></p>
-<ul class="simple">
-<li><p>LLVM years of R&amp;D</p></li>
-<li><p>MLIR quantum dialect</p></li>
-<li><p>cqor compiler is in LLVM</p></li>
-<li><p>qir spec is in LLVM dialect</p></li>
-<li><p>“QIR is embedded in LLVM IR”</p></li>
-<li><p>C++ and Clang for quantum function expression to be at the same level as classical information at IR <span id="id3">[<a class="reference internal" href="reference/markdown.html#id10" title="Alexander Mccaskey, Thien Nguyen, Anthony Santana, Daniel Claudino, Tyler Kharazi, and Hal Finkel. Extending c++ for heterogeneous quantum-classical computing. ACM Transactions on Quantum Computing, 2(2):1–36, 2021.">MNS+21</a>]</span></p></li>
-</ul>
-<p><strong>pyqir</strong></p>
-<ul class="simple">
-<li><p>Emission, Execution, and analysis (py-based PL)= pyqir</p></li>
-<li><p>Pyqir matches the code to the defined profiles in QIR and generates .ll</p></li>
-<li><p>analysis: resource estimation?</p></li>
-<li><p>includes/skip the steps for QIR spec and qcor, for py-based languages</p></li>
-<li><p>where LLVM dialect meets/compiles the higher-level instruction to executables</p></li>
-</ul>
-<p><strong>qir_spec</strong></p>
-<ul class="simple">
-<li><p>Formalization of Quantum Operation in LLVM</p></li>
-<li><p>Type Abstraction and Formalization</p></li>
-<li><p>Function call = operations on opaque data types</p></li>
-<li><p>Entry point functions</p></li>
-</ul>
-<p><strong>qcor</strong></p>
-<ul class="simple">
-<li><p>Movements between abstraction levels (XACC and MLIR dialect)</p></li>
-<li><p>MLIR –&gt; quantum instructions = stand-alone DSL<span id="id4">[<a class="reference internal" href="reference/markdown.html#id10" title="Alexander Mccaskey, Thien Nguyen, Anthony Santana, Daniel Claudino, Tyler Kharazi, and Hal Finkel. Extending c++ for heterogeneous quantum-classical computing. ACM Transactions on Quantum Computing, 2(2):1–36, 2021.">MNS+21</a>]</span></p></li>
+<li><p>using the <code class="docutils literal notranslate"><span class="pre">%qir</span></code> magic command in notebooks: <a class="reference external" href="https://docs.microsoft.com/en-us/qsharp/api/iqsharp-magic/qir">https://docs.microsoft.com/en-us/qsharp/api/iqsharp-magic/qir</a></p></li>
+<li><p>use the project file flag to specify QIR compilation of a Q# program: <a class="reference external" href="https://github.com/microsoft/qsharp-compiler/tree/main/src/QsCompiler/QirGeneration">https://github.com/microsoft/qsharp-compiler/tree/main/src/QsCompiler/QirGeneration</a></p></li>
 </ul>
 </section>
 
@@ -457,7 +452,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./tutorials"
         },
         predefinedOutput: true
     }
@@ -471,17 +466,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tutorials.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorials</p>
+            <p class="prev-next-title">Community Documentation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="reference/glossary.html" title="next page">
+    <a class='right-next' id="next-link" href="qir-python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Glossary</p>
+        <p class="prev-next-title">QIR with Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -506,7 +501,7 @@ title="Print to PDF"
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>

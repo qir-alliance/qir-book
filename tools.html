@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="reference/markdown.html" />
-    <link rel="prev" title="QIR Ecosystem projects" href="project-gallery.html" />
+    <link rel="next" title="Cite QIR Book" href="cite.html" />
+    <link rel="prev" title="Contributing" href="reference/_contributing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,8 +110,28 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials.html">
-   Tutorials
+  <a class="reference internal" href="tutorials/qir-gen-qsharp.html">
+   QIR generation with Q#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/qir-python.html">
+   QIR with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/qat-optimization.html">
+   Optimizing QIR with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     qat
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/visualize-qir.html">
+   Visualize QIR programs
   </a>
  </li>
 </ul>
@@ -122,8 +142,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conceptual.html">
+  <a class="reference internal" href="concepts/what-is-qir.html">
    What is QIR?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="concepts/why-do-we-need.html">
+   Why do we need it?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="concepts/using-qir.html">
+   How do we use it?
   </a>
  </li>
  <li class="toctree-l1">
@@ -155,31 +185,14 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   QIR book toolchain
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="reference/markdown.html">
-     Markdown Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="reference/notebooks.html">
-     Content with notebooks
-    </a>
-   </li>
-  </ul>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="reference/_contributing.html">
    Contributing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   QIR book toolchain
   </a>
  </li>
  <li class="toctree-l1">
@@ -454,6 +467,10 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/content-blocks.html?highlight=glossary#special-content-blocks">Fancy syntax for prose styling</a></p></li>
 </ul>
+<p>Special formatting used in this book:</p>
+<ul class="simple">
+<li><p>```{term}`Interoperability```` to link a term back to the glossary</p></li>
+</ul>
 </section>
 <section id="docker-environment">
 <h2>Docker environment<a class="headerlink" href="#docker-environment" title="Permalink to this headline">#</a></h2>
@@ -467,8 +484,6 @@ title="Print to PDF"
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">./qir-book</span></code> from the root of the project and it should run the notebooks and build the html version of the book that you can view from <code class="docutils literal notranslate"><span class="pre">./qir-book/_build/html/index.html</span></code>.</p></li>
 </ol>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -498,17 +513,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="project-gallery.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="reference/_contributing.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">QIR Ecosystem projects</p>
+            <p class="prev-next-title">Contributing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="reference/markdown.html" title="next page">
+    <a class='right-next' id="next-link" href="cite.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Cite QIR Book</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

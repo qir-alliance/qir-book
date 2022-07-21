@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Glossary</title>
+    <title>Optimizing QIR with qat</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="QIR Ecosystem projects" href="../project-gallery.html" />
-    <link rel="prev" title="How do we use it?" href="../concepts/using-qir.html" />
+    <link rel="next" title="Visualize QIR programs" href="visualize-qir.html" />
+    <link rel="prev" title="QIR with Python" href="qir-python.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,19 +108,19 @@ const thebe_selector_output = ".output, .cell_output"
   Tutorials
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials/qir-gen-qsharp.html">
+  <a class="reference internal" href="qir-gen-qsharp.html">
    QIR generation with Q#
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials/qir-python.html">
+  <a class="reference internal" href="qir-python.html">
    QIR with Python
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials/qat-optimization.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Optimizing QIR with
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -130,7 +130,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials/visualize-qir.html">
+  <a class="reference internal" href="visualize-qir.html">
    Visualize QIR programs
   </a>
  </li>
@@ -140,7 +140,7 @@ const thebe_selector_output = ".output, .cell_output"
   Concepts
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../concepts/what-is-qir.html">
    What is QIR?
@@ -156,8 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
    How do we use it?
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
    Glossary
   </a>
  </li>
@@ -186,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="_contributing.html">
+  <a class="reference internal" href="../reference/_contributing.html">
    Contributing
   </a>
  </li>
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="_changelog.html">
+  <a class="reference internal" href="../reference/_changelog.html">
    Change Log
   </a>
  </li>
@@ -256,6 +256,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/crazy4pi314/qir-book/main?urlpath=tree/qir-book/tutorials/qat-optimization.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -295,7 +324,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/crazy4pi314/qir-book/issues/new?title=Issue%20on%20page%20%2Freference/glossary.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/crazy4pi314/qir-book/issues/new?title=Issue%20on%20page%20%2Ftutorials/qat-optimization.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -312,7 +341,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/crazy4pi314/qir-book/edit/main/qir-book/reference/glossary.md"
+        <a href="https://github.com/crazy4pi314/qir-book/edit/main/qir-book/tutorials/qat-optimization.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -340,7 +369,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/reference/glossary.md"
+        <a href="../_sources/tutorials/qat-optimization.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -351,7 +380,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -389,7 +418,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Glossary</h1>
+                <h1>Optimizing QIR with qat</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -401,18 +430,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="glossary">
-<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">#</a></h1>
-<dl class="glossary simple">
-<dt id="term-Intermediate-Representation-IR">Intermediate Representation (IR)<a class="headerlink" href="#term-Intermediate-Representation-IR" title="Permalink to this term">#</a></dt><dd><p>An indented explanation of term 1</p>
-</dd>
-<dt id="term-Hybrid-Programs">Hybrid Programs<a class="headerlink" href="#term-Hybrid-Programs" title="Permalink to this term">#</a></dt><dd><p>An indented explanation of term2</p>
-</dd>
-<dt id="term-Interoperability">Interoperability<a class="headerlink" href="#term-Interoperability" title="Permalink to this term">#</a></dt><dd><p>An indented explanation of term3</p>
-</dd>
-<dt id="term-LLVM">LLVM<a class="headerlink" href="#term-LLVM" title="Permalink to this term">#</a></dt><dd><p>An indented explanation of term4</p>
-</dd>
-</dl>
+  <section class="tex2jax_ignore mathjax_ignore" id="optimizing-qir-with-qat">
+<h1>Optimizing QIR with <code class="docutils literal notranslate"><span class="pre">qat</span></code><a class="headerlink" href="#optimizing-qir-with-qat" title="Permalink to this headline">#</a></h1>
+<p><em>Tutorials are narrated examples of using QIR as a part of some workflow or with a particular set of tools.</em></p>
+<ul class="simple">
+<li><p>Project docs: <a class="reference external" href="https://qir-alliance.github.io/qat/UserGuide/QuickStart/">https://qir-alliance.github.io/qat/UserGuide/QuickStart/</a></p></li>
+<li><p>Take a QIR file and apply a hardware profile: <a class="reference external" href="https://qir-alliance.github.io/qat/UserGuide/IntroductionToProfiles/">https://qir-alliance.github.io/qat/UserGuide/IntroductionToProfiles/</a></p></li>
+<li><p>Remove unused variables</p></li>
+<li><p>Unroll loops</p></li>
+<li><p>Compare QIR program optimization before and after passes</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -428,7 +455,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./reference"
+            path: "./tutorials"
         },
         predefinedOutput: true
     }
@@ -442,17 +469,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../concepts/using-qir.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="qir-python.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">How do we use it?</p>
+            <p class="prev-next-title">QIR with Python</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../project-gallery.html" title="next page">
+    <a class='right-next' id="next-link" href="visualize-qir.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QIR Ecosystem projects</p>
+        <p class="prev-next-title">Visualize QIR programs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
