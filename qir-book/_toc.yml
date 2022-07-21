@@ -3,11 +3,16 @@ root: index
 parts:
 - caption: Tutorials
   chapters:
-  - file: tutorials
+  - file: tutorials/qir-gen-qsharp
+  - file: tutorials/qir-python
+  - file: tutorials/qat-optimization
+  - file: tutorials/visualize-qir
 
 - caption: Concepts
   chapters:
-  - file: conceptual
+  - file: concepts/what-is-qir
+  - file: concepts/why-do-we-need
+  - file: concepts/using-qir
   - file: reference/glossary
 
 - caption: Reference
@@ -18,12 +23,9 @@ parts:
 
 - caption: About QIR book
   chapters:
+  - file: reference/_contributing
   - file: tools
     title: QIR book toolchain
-    sections:
-    - file: reference/markdown
-    - file: reference/notebooks
-  - file: reference/_contributing
   - file: cite
   - file: reference/_changelog
-  #- file: genindex
+  # - file: genindex

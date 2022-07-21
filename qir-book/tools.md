@@ -8,6 +8,10 @@ Helpful links:
 
 - [Fancy syntax for prose styling](https://jupyterbook.org/en/stable/content/content-blocks.html?highlight=glossary#special-content-blocks)
 
+Special formatting used in this book:
+
+- ```{term}`Interoperability```` to link a term back to the glossary
+
 ## Docker environment
 
 TBD
