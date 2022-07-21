@@ -1,135 +1,167 @@
 # QIR Ecosystem projects
 
-In no particular order...
+Want to add your project? Check out the [sample card format]() and make a PR to this page!
 
-````{panels}
-qir-spec
-^^^
-QIR specification defining how to represent quantum programs within the LLVM IR
-+++
-```{link-button} https://github.com/qir-alliance/qir-spec
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
-```
-```{link-button} https://github.com/qir-alliance/qir-spec/tree/main/specification#quantum-intermediate-representation-qir
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
-```
----
+::::{grid} 1 2 2 2
+:class-container: landing-grid
 
-pyqir
-^^^
-Python bindings for emitting, loading, and executing QIR.
-+++
-```{link-button} https://github.com/qir-alliance/pyqir
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
-```
-```{link-button} https://qir-alliance.github.io/pyqir/
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
-```
----
-
-qcor
-^^^
-C++ compiler for heterogeneous quantum-classical computing using QIR, including the XACC runtime
-+++
-```{link-button} https://github.com/qir-alliance/qcor
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
-```
-```{link-button} https://aide-qc.github.io/deploy/lang_spec/
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
-```
----
-
-qat
-^^^
-QIR compiler tools and optimization passes for targeting QIR to different hardware backends
-+++
-```{link-button} https://github.com/qir-alliance/qat
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
-```
-```{link-button} https://qir-alliance.github.io/qat/
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
-```
----
-
-nwqsim
+:::{grid-item-card}
+:padding: 2
+**⏩ nwqsim**
 ^^^
 High-performance simulator for executing QIR on GPU and CPU backends
 +++
-```{link-button} https://github.com/qir-alliance/nwqsim
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
+```{button-link} https://github.com/qir-alliance/nwqsim
+:color: primary
+:outline:
+:expand:
+repo
 ```
-```{link-button} https://github.com/qir-alliance/nwqsim#nwqsim-northwest-quantum-circuit-simulation-environment
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
+```{button-link} https://github.com/qir-alliance/nwqsim#nwqsim-northwest-quantum-circuit-simulation-environment
+:color: primary
+:outline:
+:expand:
+docs
 ```
----
+:::
 
-qcs-sdk-qir
+:::{grid-item-card}
+:padding: 2
+**🐍 pyqir**
+^^^
+Python bindings for emitting, loading, and executing QIR.
++++
+```{button-link} https://github.com/qir-alliance/pyqir
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://qir-alliance.github.io/pyqir/
+:color: primary
+:outline:
+:expand:
+docs
+```
+:::
+
+:::{grid-item-card}
+:padding: 2
+**🐈 qat**
+^^^
+QIR compiler tools and optimization passes for targeting QIR to different hardware backends
++++
+```{button-link} https://github.com/qir-alliance/qat
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://qir-alliance.github.io/qat/
+:color: primary
+:outline:
+:expand:
+docs
+```
+:::
+
+
+:::{grid-item-card}
+:padding: 2
+**⚙️ qcor**
+^^^
+C++ compiler for heterogeneous quantum-classical computing using QIR, including the XACC runtime
++++
+```{button-link} https://github.com/qir-alliance/qcor
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://aide-qc.github.io/deploy/lang_spec/
+:color: primary
+:outline:
+:expand:
+docs
+```
+:::
+
+:::{grid-item-card}
+:padding: 2
+**🌲 qcs-sdk-qir**
 ^^^
 Compile & Run Quantum Intermediate Representation (QIR) Programs on QCS
 +++
-```{link-button} https://github.com/rigetti/qcs-sdk-qir
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
+```{button-link} https://github.com/rigetti/qcs-sdk-qir
+:color: primary
+:outline:
+:expand:
+repo
 ```
-```{link-button} https://github.com/rigetti/qcs-sdk-qir#qcs-qir-sdk
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
+```{button-link} https://github.com/rigetti/qcs-sdk-qir#qcs-qir-sdk
+:color: primary
+:outline:
+:expand:
+docs
 ```
----
+:::
 
-qwop
+:::{grid-item-card}
+:padding: 2
+**📃 qir-spec**
+^^^
+QIR specification defining how to represent quantum programs within the LLVM IR
+```{button-link} https://github.com/qir-alliance/qir-spec
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://github.com/qir-alliance/qir-spec/tree/main/specification#quantum-intermediate-representation-qir
+:color: primary
+:outline:
+:expand:
+docs
+```
+:::
+
+:::{grid-item-card}
+:padding: 2
+**🏃‍♀️ qwop**
 ^^^
 Helpful utilities for working with QIR in Python
 +++
-```{link-button} https://github.com/crazy4pi314/qwop
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
+```{button-link} https://github.com/crazy4pi314/qwop
+:color: primary
+:outline:
+:expand:
+repo
 ```
-```{link-button} https://github.com/crazy4pi314/qwop#qwop--tools-to-help-you-get-running-with-qir-in-python
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
+```{button-link} https://github.com/crazy4pi314/qwop#qwop--tools-to-help-you-get-running-with-qir-in-python
+:color: primary
+:outline:
+:expand:
+docs
 ```
 
-````
+::::
 <!-- 
----
-
-Project Name
+:::{grid-item-card}
+:padding: 2
+**Project Name**
 ^^^
 Short description of project
 +++
-```{link-button} https://www.example.com
-:type: url
-:text: repo
-:classes: btn-outline-primary btn-block
+```{button-link} https://www.example.com
+:color: primary
+:outline:
+:expand:
+repo
 ```
-```{link-button} https://www.example.com
-:type: url
-:text: docs
-:classes: btn-outline-primary btn-block
+```{button-link} https://www.example.com
+:color: primary
+:outline:
+:expand:
+docs
 ```
 -->
