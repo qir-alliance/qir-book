@@ -144,6 +144,26 @@ repo
 docs
 ```
 
+:::{grid-item-card}
+:padding: 2
+** Higher Level Oracle Description Language (HODL) **
+^^^
+A tool for writing quantum oracles in an easy and user-friendly format
++++
+```{button-link} https://github.com/at2005/HODL
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://github.com/at2005/HODL
+:color: primary
+:outline:
+:expand:
+docs
+```
+
+
 ::::
 <!-- 
 :::{grid-item-card}
