@@ -27,6 +27,26 @@ docs
 
 :::{grid-item-card}
 :padding: 2
+**🖥️ pytket-qir**
+^^^
+Python package, aimed at interfacing QIR programs with [`pytket`](https://cqcl.github.io/tket/pytket/api/index.html).
++++
+```{button-link} https://github.com/CQCL/pytket-qir
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://github.com/CQCL/pytket-qir
+:color: primary
+:outline:
+:expand:
+docs
+```
+:::
+
+:::{grid-item-card}
+:padding: 2
 **🐍 pyqir**
 ^^^
 Python bindings for emitting, loading, and executing QIR.
