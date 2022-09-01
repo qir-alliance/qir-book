@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+export PATH="$PATH:/home/jovyan/.dotnet/tools"
+export DOTNET_ROOT="/srv/conda/envs/notebook/lib/dotnet/"
+
+echo "## Installing PowerShell notebook support. ##"
+
+/srv/conda/envs/notebook/lib/dotnet/dotnet tool install -g PowerShell
+/srv/conda/envs/notebook/lib/dotnet/dotnet tool install -g Microsoft.dotnet-interactive
+/srv/conda/envs/notebook/lib/dotnet/dotnet interactive jupyter install

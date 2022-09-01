@@ -1,10 +1,20 @@
 name: qir-book
 channels:
   - conda-forge
+  - microsoft	
 dependencies:
+    
   - matplotlib
   - numpy
   - pip
+  - dotnet-sdk>=6.0
+  # Required by .NET Interactive.
+  - dotnet-aspnetcore>=6.0
+  - notebook
+  - llvm-tools=11
+  - clangxx=11
+  - iqsharp
+  - qsharp 
   - pip:
     - sphinx-design
     - jupyter-book
