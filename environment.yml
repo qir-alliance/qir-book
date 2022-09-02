@@ -1,8 +1,7 @@
 name: qir-book
 channels:
   - conda-forge
-  - microsoft	
-dependencies: 
+dependencies:
   - matplotlib
   - numpy
   - pip
@@ -12,8 +11,6 @@ dependencies:
   - notebook
   - llvm-tools=11
   - clangxx=11
-  - iqsharp
-  - qsharp 
   - pip:
     - sphinx-design
     - jupyter-book
