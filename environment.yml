@@ -1,7 +1,7 @@
 name: qir-book
 channels:
   - conda-forge
-  - quantum-engineering	
+  - microsoft	
 dependencies: 
   - matplotlib
   - numpy
