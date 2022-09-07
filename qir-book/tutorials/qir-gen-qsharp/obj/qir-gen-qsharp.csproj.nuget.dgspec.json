@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp/qir-gen-qsharp.csproj": {}
+  },
+  "projects": {
+    "/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp/qir-gen-qsharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp/qir-gen-qsharp.csproj",
+        "projectName": "qir-gen-qsharp",
+        "projectPath": "/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp/qir-gen-qsharp.csproj",
+        "packagesPath": "/Users/paria/.nuget/packages/",
+        "outputPath": "/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/paria/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Quantum.CSharpGeneration": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.25.222597, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Quantum.EntryPointDriver": {
+              "target": "Package",
+              "version": "[0.25.222597, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Quantum.QSharp.Core": {
+              "target": "Package",
+              "version": "[0.25.222597, )"
+            },
+            "Microsoft.Quantum.Runtime.Core": {
+              "target": "Package",
+              "version": "[0.25.222597, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Quantum.Standard": {
+              "target": "Package",
+              "version": "[0.25.222597, )"
+            },
+            "Microsoft.Quantum.Targets.Interfaces": {
+              "target": "Package",
+              "version": "[0.25.222597, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
