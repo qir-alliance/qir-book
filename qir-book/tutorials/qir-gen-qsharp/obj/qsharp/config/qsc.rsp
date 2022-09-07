@@ -7,47 +7,24 @@
 --output
     "/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp/obj/qsharp/"
 --references
-    "/Users/paria/.nuget/packages/azure.core/1.22.0/lib/net5.0/Azure.Core.dll"
-    "/Users/paria/.nuget/packages/azure.identity/1.5.0/lib/netstandard2.0/Azure.Identity.dll"
-    "/Users/paria/.nuget/packages/azure.quantum.jobs/1.0.0-beta.3/lib/netstandard2.0/Azure.Quantum.Jobs.dll"
-    "/Users/paria/.nuget/packages/azure.storage.blobs/12.10.0/lib/netstandard2.0/Azure.Storage.Blobs.dll"
-    "/Users/paria/.nuget/packages/azure.storage.common/12.9.0/lib/netstandard2.0/Azure.Storage.Common.dll"
-    "/Users/paria/.nuget/packages/microsoft.azure.quantum.client/0.25.222597/lib/netstandard2.1/Microsoft.Azure.Quantum.Client.dll"
-    "/Users/paria/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll"
-    "/Users/paria/.nuget/packages/microsoft.identity.client/4.30.1/lib/netcoreapp2.1/Microsoft.Identity.Client.dll"
-    "/Users/paria/.nuget/packages/microsoft.identity.client.extensions.msal/2.18.4/lib/netcoreapp2.1/Microsoft.Identity.Client.Extensions.Msal.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.BondSchemas.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.entrypointdriver/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.EntryPointDriver.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsCompilationManager.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsCompiler.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsCore.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsDataStructures.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsDocumentationParser.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.qsharp.core/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QSharp.Core.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.qsharp.foundation/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QSharp.Foundation.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsOptimizations.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsSyntaxProcessor.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsTextProcessor.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.compiler/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.QsTransformations.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.runtime.core/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.Runtime.Core.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.simulators/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.Simulation.Common.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.simulators/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.simulators/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.Simulators.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.standard/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.Standard.dll"
-    "/Users/paria/.nuget/packages/microsoft.quantum.targets.interfaces/0.25.222597/lib/netstandard2.1/Microsoft.Quantum.Targets.Interfaces.dll"
-    "/Users/paria/.nuget/packages/windowsazure.storage/9.3.3/lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.qsharp.core/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.QSharp.Core.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.qsharp.foundation/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.QSharp.Foundation.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.runtime.core/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.Runtime.Core.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.simulators/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.Simulation.Common.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.simulators/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.simulators/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.Simulators.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.standard/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.Standard.dll"
+    "/Users/paria/.nuget/packages/microsoft.quantum.targets.interfaces/0.15.2103133969/lib/netstandard2.1/Microsoft.Quantum.Targets.Interfaces.dll"
     "/Users/paria/.nuget/packages/numsharp/0.20.5/lib/netstandard2.0/NumSharp.Core.dll"
---load
-    "/Users/paria/.nuget/packages/microsoft.quantum.csharpgeneration/0.25.222597/build//../lib/netstandard2.1/Microsoft.Quantum.CSharpGeneration.dll"
+--qir
+    /Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp//qir/
 --runtime
     FullComputation
---skip-monomorphization
 --package-load-fallback-folders
     "/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp/bin/Debug/net6.0/"
 --assembly-properties
-    DocsPackageId:qir-gen-qsharp
-    ExecutionTarget:Any
-    AssemblyName:qir-gen-qsharp
     ProcessorArchitecture:Unspecified
-    TargetCapability:FullComputation
     QSharpOutputType:QSharpExe
+    ExecutionTarget:Any
+    DocsPackageId:qir-gen-qsharp
+    QirOutputPath:"/Users/paria/Desktop/qir-book/qir-book/tutorials/qir-gen-qsharp//qir/"

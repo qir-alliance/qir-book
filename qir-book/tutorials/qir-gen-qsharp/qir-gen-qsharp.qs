@@ -3,7 +3,7 @@
 // Licensed under the MIT License.
 
 // In this section, QIR is generated from Q# code for teleportation to transfer the
-// binary representation of “hello world!”, followed with ASCII encoding. 
+// binary representation of “hello world!”, followed with ASCII decoding. 
 // Teleportation technique contains heterogeneous instructions at the compilation time. The interdependent 
 // conditionals following the measurement of the source and the auxiliary qubits in teleportation 
 // determine the next quantum gate operations on the target qubit.

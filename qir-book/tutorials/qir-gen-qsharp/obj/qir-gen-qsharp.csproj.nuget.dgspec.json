@@ -38,34 +38,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Quantum.CSharpGeneration": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[0.25.222597, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Quantum.EntryPointDriver": {
-              "target": "Package",
-              "version": "[0.25.222597, )",
-              "autoReferenced": true
-            },
             "Microsoft.Quantum.QSharp.Core": {
               "target": "Package",
-              "version": "[0.25.222597, )"
-            },
-            "Microsoft.Quantum.Runtime.Core": {
-              "target": "Package",
-              "version": "[0.25.222597, )",
-              "autoReferenced": true
+              "version": "[0.15.2103133969, )"
             },
             "Microsoft.Quantum.Standard": {
               "target": "Package",
-              "version": "[0.25.222597, )"
-            },
-            "Microsoft.Quantum.Targets.Interfaces": {
-              "target": "Package",
-              "version": "[0.25.222597, )",
-              "autoReferenced": true
+              "version": "[0.15.2103133969, )"
             }
           },
           "imports": [
