@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - microsoft
 dependencies:
+  - python
   - matplotlib
   - numpy
   - pip
@@ -11,10 +12,19 @@ dependencies:
   - dotnet-aspnetcore>=6.0
   - notebook
   - llvm-tools=11
+  - cmake
+  - clang
+  - clang-tools
   - clangxx=11
+  - nodejs
   - iqsharp
   - qsharp
   - pyquil 
+  - autopep8==1.6.0
+  - click==7.1.2
+  - lit==12.0.1 
+  - toml==0.10.2
   - pip:
     - sphinx-design
     - jupyter-book
+    - lit==12.0.1

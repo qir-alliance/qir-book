@@ -1,4 +1,4 @@
 qir-book/_build
-.DS_Store
-bin
-obj
+*.DS_Store
+**/bin
+**/obj
