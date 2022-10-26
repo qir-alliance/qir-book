@@ -1,9 +1,0 @@
-#!/bin/bash
-# Used by binder to set environment variables on startup.
-
-set -e
-export PATH="$PATH:/home/jovyan/.dotnet/tools"
-export DOTNET_ROOT="/srv/conda/envs/notebook/lib/dotnet/"
-
-# Forward to rest of entrypoint.
-exec "$@" 
