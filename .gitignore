@@ -1,4 +1,4 @@
-echo .DS_Store >> .gitignore
+.DS_Store
 qir-book/_build
 **/bin
 **/obj
