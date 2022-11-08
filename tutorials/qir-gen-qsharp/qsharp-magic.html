@@ -1,0 +1,1283 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>QIR Generation with Q# Using Magic Commands</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="QIR with Python" href="../qir-python.html" />
+    <link rel="prev" title="Community Documentation" href="../../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   QIR with Q#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../qir-python.html">
+   QIR with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../qat-optimization.html">
+   Optimizing QIR with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     qat
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualize-qir.html">
+   Visualize QIR programs
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../concepts/what-is-qir.html">
+   What is QIR?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../concepts/why-do-we-need.html">
+   Why do we need it?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../concepts/using-qir.html">
+   How do we use it?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../project-gallery.html">
+   QIR Ecosystem projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="http://qir-alliance.org/">
+   QIR Alliance Organization
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About QIR book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/_contributing.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tools.html">
+   QIR book toolchain
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cite.html">
+   Cite QIR Book
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/crazy4pi314/qir-book/main?urlpath=tree/qir-book/tutorials/qir-gen-qsharp/qsharp-magic.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/crazy4pi314/qir-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/crazy4pi314/qir-book/issues/new?title=Issue%20on%20page%20%2Ftutorials/qir-gen-qsharp/qsharp-magic.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/crazy4pi314/qir-book/edit/main/qir-book/tutorials/qir-gen-qsharp/qsharp-magic.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/tutorials/qir-gen-qsharp/qsharp-magic.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>QIR Generation with Q# Using Magic Commands</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="qir-generation-with-q-using-magic-commands">
+<h1>QIR Generation with Q# Using Magic Commands<a class="headerlink" href="#qir-generation-with-q-using-magic-commands" title="Permalink to this headline">#</a></h1>
+<p>In this example, QIR is generated from Q# code for teleportation to transfer the binary representation of “hello world!”, followed with ASCII decoding. Teleportation technique contains heterogeneous instructions at the compilation time. The interdependent conditionals following the measurement of the source and the auxiliary qubits in teleportation determine the next quantum gate operations on the target qubit.</p>
+<p>Computations involving heterogeneous instructions at compile time can benefit from QIR enabled compilers. QIR is generated in LLVM, which is backed by decades of classical compilation research and development. Hybrid quantum algorithms were <a class="reference external" href="https://arxiv.org/pdf/2207.06850.pdf">defined</a> to rely on both classical and quantum resources to fulfill the abstract computational model of the algorithm. In the next series of tutorials, a hybrid classical-quantum algorithm such as VQE or HHL (?) will be used to demonstrate further capabilities of QIR.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-qsharp notranslate"><div class="highlight"><pre><span></span>// Building on https://github.com/microsoft/Quantum/blob/main/samples/getting-started/teleportation/TeleportationSample.qs
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+open Microsoft.Quantum.Intrinsic;
+open Microsoft.Quantum.Canon;
+open Microsoft.Quantum.Measurement;
+open Microsoft.Quantum.Core;
+open Microsoft.Quantum.Arrays;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><ul></ul></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-qsharp notranslate"><div class="highlight"><pre><span></span>// Converts data type: int to bool 
+operation int2bool(bit: Int) : Bool {
+        if (bit == 1){return true;}
+        else {return false;}
+    }
+// Converts data type: bool to int 
+ operation bool2int(msg: Bool) : Int {
+        if (msg == true){return 1;}
+        else {return 0;}
+    }
+// Pure quantum section of teleportation technique 
+operation Teleport (msg : Qubit, target : Qubit) : Unit {
+    use register = Qubit();
+
+    H(register);
+    CNOT(register, target);
+
+    CNOT(msg, register);
+    H(msg);
+
+
+    if (MResetZ(msg) == One) { Z(target); }
+
+    if (IsResultOne(MResetZ(register))) { X(target); }
+}
+// Interdependent conditional section of teleportation technique 
+operation TeleportClassicalMessage (message : Bool) : Bool {
+   
+    use (msg, target) = (Qubit(), Qubit());
+
+   
+    if (message) {
+        X(msg);
+    }
+
+ 
+    Teleport(msg, target);
+
+    
+    return MResetZ(target) == One;
+}
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><ul><li>int2bool</li><li>bool2int</li><li>Teleport</li><li>TeleportClassicalMessage</li></ul></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-qsharp notranslate"><div class="highlight"><pre><span></span>// Runs teleporation with 2 loops: classical and hetrogenous 
+operation Greetings() : Unit { 
+    mutable binary=[1, 0, 1, 0, 0];
+    let msg = ForEach(int2bool, binary);
+    let transferred= ForEach(TeleportClassicalMessage, msg);
+    for index in 0 .. Length(transferred)-1 {
+        Message($&quot;{transferred[index]}&quot;);
+    }     
+}
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><ul><li>Greetings</li></ul></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-qsharp notranslate"><div class="highlight"><pre><span></span>%simulate Greetings
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-qsharp notranslate"><div class="highlight"><pre><span></span>%qir Greetings
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre><code>; ModuleID = &#39;/tmp/tmptslwme.bc&#39;
+
+%Tuple = type opaque
+%Array = type opaque
+%Callable = type opaque
+%String = type opaque
+%Qubit = type opaque
+%Result = type opaque
+
+@SNIPPET__int2bool__FunctionTable = internal constant [4 x void (%Tuple*, %Tuple*, %Tuple*)*] [void (%Tuple*, %Tuple*, %Tuple*)* @SNIPPET__int2bool__body__wrapper, void (%Tuple*, %Tuple*, %Tuple*)* null, void (%Tuple*, %Tuple*, %Tuple*)* null, void (%Tuple*, %Tuple*, %Tuple*)* null]
+@SNIPPET__TeleportClassicalMessage__FunctionTable = internal constant [4 x void (%Tuple*, %Tuple*, %Tuple*)*] [void (%Tuple*, %Tuple*, %Tuple*)* @SNIPPET__TeleportClassicalMessage__body__wrapper, void (%Tuple*, %Tuple*, %Tuple*)* null, void (%Tuple*, %Tuple*, %Tuple*)* null, void (%Tuple*, %Tuple*, %Tuple*)* null]
+@0 = internal constant [5 x i8] c&quot;true\00&quot;
+@1 = internal constant [6 x i8] c&quot;false\00&quot;
+@2 = internal constant [3 x i8] c&quot;()\00&quot;
+
+define internal void @ENTRYPOINT__Greetings__body() {
+entry:
+  call void @SNIPPET__Greetings__body()
+  ret void
+}
+
+define internal void @SNIPPET__Greetings__body() {
+entry:
+  %binary = alloca %Array*, align 8
+  %0 = call %Array* @__quantum__rt__array_create_1d(i32 8, i64 5)
+  %1 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %0, i64 0)
+  %2 = bitcast i8* %1 to i64*
+  %3 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %0, i64 1)
+  %4 = bitcast i8* %3 to i64*
+  %5 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %0, i64 2)
+  %6 = bitcast i8* %5 to i64*
+  %7 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %0, i64 3)
+  %8 = bitcast i8* %7 to i64*
+  %9 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %0, i64 4)
+  %10 = bitcast i8* %9 to i64*
+  store i64 1, i64* %2, align 4
+  store i64 0, i64* %4, align 4
+  store i64 1, i64* %6, align 4
+  store i64 0, i64* %8, align 4
+  store i64 0, i64* %10, align 4
+  store %Array* %0, %Array** %binary, align 8
+  call void @__quantum__rt__array_update_alias_count(%Array* %0, i32 1)
+  %11 = call %Callable* @__quantum__rt__callable_create([4 x void (%Tuple*, %Tuple*, %Tuple*)*]* @SNIPPET__int2bool__FunctionTable, [2 x void (%Tuple*, i32)*]* null, %Tuple* null)
+  %msg = call %Array* @Microsoft__Quantum__Arrays___70b81a8a5b13489ea1ea66ebf8d3c64b_ForEach__body(%Callable* %11, %Array* %0)
+  call void @__quantum__rt__array_update_alias_count(%Array* %msg, i32 1)
+  %12 = call %Callable* @__quantum__rt__callable_create([4 x void (%Tuple*, %Tuple*, %Tuple*)*]* @SNIPPET__TeleportClassicalMessage__FunctionTable, [2 x void (%Tuple*, i32)*]* null, %Tuple* null)
+  %transferred = call %Array* @Microsoft__Quantum__Arrays___ebd74584cc3b4174a8c45477d127541d_ForEach__body(%Callable* %12, %Array* %msg)
+  call void @__quantum__rt__array_update_alias_count(%Array* %transferred, i32 1)
+  %13 = call i64 @__quantum__rt__array_get_size_1d(%Array* %transferred)
+  %14 = sub i64 %13, 1
+  br label %header__1
+
+header__1:                                        ; preds = %exiting__1, %entry
+  %index = phi i64 [ 0, %entry ], [ %22, %exiting__1 ]
+  %15 = icmp sle i64 %index, %14
+  br i1 %15, label %body__1, label %exit__1
+
+body__1:                                          ; preds = %header__1
+  %16 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %transferred, i64 %index)
+  %17 = bitcast i8* %16 to i1*
+  %18 = load i1, i1* %17, align 1
+  br i1 %18, label %condTrue__1, label %condFalse__1
+
+condTrue__1:                                      ; preds = %body__1
+  %19 = call %String* @__quantum__rt__string_create(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @0, i32 0, i32 0))
+  br label %condContinue__1
+
+condFalse__1:                                     ; preds = %body__1
+  %20 = call %String* @__quantum__rt__string_create(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @1, i32 0, i32 0))
+  br label %condContinue__1
+
+condContinue__1:                                  ; preds = %condFalse__1, %condTrue__1
+  %21 = phi %String* [ %19, %condTrue__1 ], [ %20, %condFalse__1 ]
+  call void @__quantum__rt__message(%String* %21)
+  call void @__quantum__rt__string_update_reference_count(%String* %21, i32 -1)
+  br label %exiting__1
+
+exiting__1:                                       ; preds = %condContinue__1
+  %22 = add i64 %index, 1
+  br label %header__1
+
+exit__1:                                          ; preds = %header__1
+  call void @__quantum__rt__array_update_alias_count(%Array* %0, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %msg, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %transferred, i32 -1)
+  call void @__quantum__rt__capture_update_reference_count(%Callable* %11, i32 -1)
+  call void @__quantum__rt__callable_update_reference_count(%Callable* %11, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %msg, i32 -1)
+  call void @__quantum__rt__capture_update_reference_count(%Callable* %12, i32 -1)
+  call void @__quantum__rt__callable_update_reference_count(%Callable* %12, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %transferred, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %0, i32 -1)
+  ret void
+}
+
+declare %Array* @__quantum__rt__array_create_1d(i32, i64)
+
+declare i8* @__quantum__rt__array_get_element_ptr_1d(%Array*, i64)
+
+declare void @__quantum__rt__array_update_alias_count(%Array*, i32)
+
+define internal %Array* @Microsoft__Quantum__Arrays___70b81a8a5b13489ea1ea66ebf8d3c64b_ForEach__body(%Callable* %action, %Array* %array) {
+entry:
+  %retval = alloca %Array*, align 8
+  call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 1)
+  call void @__quantum__rt__callable_update_alias_count(%Callable* %action, i32 1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %array, i32 1)
+  %length = call i64 @__quantum__rt__array_get_size_1d(%Array* %array)
+  %0 = icmp eq i64 %length, 0
+  br i1 %0, label %then0__1, label %continue__1
+
+then0__1:                                         ; preds = %entry
+  %1 = call %Array* @__quantum__rt__array_create_1d(i32 1, i64 0)
+  call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__callable_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %array, i32 -1)
+  ret %Array* %1
+
+continue__1:                                      ; preds = %entry
+  %2 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %array, i64 0)
+  %3 = bitcast i8* %2 to i64*
+  %4 = load i64, i64* %3, align 4
+  %5 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i64 }* getelementptr ({ i64 }, { i64 }* null, i32 1) to i64))
+  %6 = bitcast %Tuple* %5 to { i64 }*
+  %7 = getelementptr inbounds { i64 }, { i64 }* %6, i32 0, i32 0
+  store i64 %4, i64* %7, align 4
+  %8 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i1 }* getelementptr ({ i1 }, { i1 }* null, i32 1) to i64))
+  call void @__quantum__rt__callable_invoke(%Callable* %action, %Tuple* %5, %Tuple* %8)
+  %9 = bitcast %Tuple* %8 to { i1 }*
+  %10 = getelementptr inbounds { i1 }, { i1 }* %9, i32 0, i32 0
+  %first = load i1, i1* %10, align 1
+  %11 = call %Array* @__quantum__rt__array_create_1d(i32 1, i64 %length)
+  %12 = sub i64 %length, 1
+  br label %header__1
+
+header__1:                                        ; preds = %exiting__1, %continue__1
+  %13 = phi i64 [ 0, %continue__1 ], [ %17, %exiting__1 ]
+  %14 = icmp sle i64 %13, %12
+  br i1 %14, label %body__1, label %exit__1
+
+body__1:                                          ; preds = %header__1
+  %15 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %11, i64 %13)
+  %16 = bitcast i8* %15 to i1*
+  store i1 %first, i1* %16, align 1
+  br label %exiting__1
+
+exiting__1:                                       ; preds = %body__1
+  %17 = add i64 %13, 1
+  br label %header__1
+
+exit__1:                                          ; preds = %header__1
+  store %Array* %11, %Array** %retval, align 8
+  call void @__quantum__rt__array_update_alias_count(%Array* %11, i32 1)
+  %18 = sub i64 %length, 1
+  br label %header__2
+
+header__2:                                        ; preds = %exiting__2, %exit__1
+  %idx = phi i64 [ 1, %exit__1 ], [ %34, %exiting__2 ]
+  %19 = icmp sle i64 %idx, %18
+  br i1 %19, label %body__2, label %exit__2
+
+body__2:                                          ; preds = %header__2
+  %20 = load %Array*, %Array** %retval, align 8
+  call void @__quantum__rt__array_update_alias_count(%Array* %20, i32 -1)
+  %21 = call %Array* @__quantum__rt__array_copy(%Array* %20, i1 false)
+  %22 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %array, i64 %idx)
+  %23 = bitcast i8* %22 to i64*
+  %24 = load i64, i64* %23, align 4
+  %25 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i64 }* getelementptr ({ i64 }, { i64 }* null, i32 1) to i64))
+  %26 = bitcast %Tuple* %25 to { i64 }*
+  %27 = getelementptr inbounds { i64 }, { i64 }* %26, i32 0, i32 0
+  store i64 %24, i64* %27, align 4
+  %28 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i1 }* getelementptr ({ i1 }, { i1 }* null, i32 1) to i64))
+  call void @__quantum__rt__callable_invoke(%Callable* %action, %Tuple* %25, %Tuple* %28)
+  %29 = bitcast %Tuple* %28 to { i1 }*
+  %30 = getelementptr inbounds { i1 }, { i1 }* %29, i32 0, i32 0
+  %31 = load i1, i1* %30, align 1
+  %32 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %21, i64 %idx)
+  %33 = bitcast i8* %32 to i1*
+  store i1 %31, i1* %33, align 1
+  call void @__quantum__rt__array_update_alias_count(%Array* %21, i32 1)
+  store %Array* %21, %Array** %retval, align 8
+  call void @__quantum__rt__array_update_reference_count(%Array* %20, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %25, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %28, i32 -1)
+  br label %exiting__2
+
+exiting__2:                                       ; preds = %body__2
+  %34 = add i64 %idx, 1
+  br label %header__2
+
+exit__2:                                          ; preds = %header__2
+  %35 = load %Array*, %Array** %retval, align 8
+  call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__callable_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %array, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %35, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %5, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %8, i32 -1)
+  ret %Array* %35
+}
+
+define internal void @SNIPPET__int2bool__body__wrapper(%Tuple* %capture-tuple, %Tuple* %arg-tuple, %Tuple* %result-tuple) {
+entry:
+  %0 = bitcast %Tuple* %arg-tuple to { i64 }*
+  %1 = getelementptr inbounds { i64 }, { i64 }* %0, i32 0, i32 0
+  %2 = load i64, i64* %1, align 4
+  %3 = call i1 @SNIPPET__int2bool__body(i64 %2)
+  %4 = bitcast %Tuple* %result-tuple to { i1 }*
+  %5 = getelementptr inbounds { i1 }, { i1 }* %4, i32 0, i32 0
+  store i1 %3, i1* %5, align 1
+  ret void
+}
+
+declare %Callable* @__quantum__rt__callable_create([4 x void (%Tuple*, %Tuple*, %Tuple*)*]*, [2 x void (%Tuple*, i32)*]*, %Tuple*)
+
+define internal %Array* @Microsoft__Quantum__Arrays___ebd74584cc3b4174a8c45477d127541d_ForEach__body(%Callable* %action, %Array* %array) {
+entry:
+  %retval = alloca %Array*, align 8
+  call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 1)
+  call void @__quantum__rt__callable_update_alias_count(%Callable* %action, i32 1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %array, i32 1)
+  %length = call i64 @__quantum__rt__array_get_size_1d(%Array* %array)
+  %0 = icmp eq i64 %length, 0
+  br i1 %0, label %then0__1, label %continue__1
+
+then0__1:                                         ; preds = %entry
+  %1 = call %Array* @__quantum__rt__array_create_1d(i32 1, i64 0)
+  call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__callable_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %array, i32 -1)
+  ret %Array* %1
+
+continue__1:                                      ; preds = %entry
+  %2 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %array, i64 0)
+  %3 = bitcast i8* %2 to i1*
+  %4 = load i1, i1* %3, align 1
+  %5 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i1 }* getelementptr ({ i1 }, { i1 }* null, i32 1) to i64))
+  %6 = bitcast %Tuple* %5 to { i1 }*
+  %7 = getelementptr inbounds { i1 }, { i1 }* %6, i32 0, i32 0
+  store i1 %4, i1* %7, align 1
+  %8 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i1 }* getelementptr ({ i1 }, { i1 }* null, i32 1) to i64))
+  call void @__quantum__rt__callable_invoke(%Callable* %action, %Tuple* %5, %Tuple* %8)
+  %9 = bitcast %Tuple* %8 to { i1 }*
+  %10 = getelementptr inbounds { i1 }, { i1 }* %9, i32 0, i32 0
+  %first = load i1, i1* %10, align 1
+  %11 = call %Array* @__quantum__rt__array_create_1d(i32 1, i64 %length)
+  %12 = sub i64 %length, 1
+  br label %header__1
+
+header__1:                                        ; preds = %exiting__1, %continue__1
+  %13 = phi i64 [ 0, %continue__1 ], [ %17, %exiting__1 ]
+  %14 = icmp sle i64 %13, %12
+  br i1 %14, label %body__1, label %exit__1
+
+body__1:                                          ; preds = %header__1
+  %15 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %11, i64 %13)
+  %16 = bitcast i8* %15 to i1*
+  store i1 %first, i1* %16, align 1
+  br label %exiting__1
+
+exiting__1:                                       ; preds = %body__1
+  %17 = add i64 %13, 1
+  br label %header__1
+
+exit__1:                                          ; preds = %header__1
+  store %Array* %11, %Array** %retval, align 8
+  call void @__quantum__rt__array_update_alias_count(%Array* %11, i32 1)
+  %18 = sub i64 %length, 1
+  br label %header__2
+
+header__2:                                        ; preds = %exiting__2, %exit__1
+  %idx = phi i64 [ 1, %exit__1 ], [ %34, %exiting__2 ]
+  %19 = icmp sle i64 %idx, %18
+  br i1 %19, label %body__2, label %exit__2
+
+body__2:                                          ; preds = %header__2
+  %20 = load %Array*, %Array** %retval, align 8
+  call void @__quantum__rt__array_update_alias_count(%Array* %20, i32 -1)
+  %21 = call %Array* @__quantum__rt__array_copy(%Array* %20, i1 false)
+  %22 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %array, i64 %idx)
+  %23 = bitcast i8* %22 to i1*
+  %24 = load i1, i1* %23, align 1
+  %25 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i1 }* getelementptr ({ i1 }, { i1 }* null, i32 1) to i64))
+  %26 = bitcast %Tuple* %25 to { i1 }*
+  %27 = getelementptr inbounds { i1 }, { i1 }* %26, i32 0, i32 0
+  store i1 %24, i1* %27, align 1
+  %28 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ i1 }* getelementptr ({ i1 }, { i1 }* null, i32 1) to i64))
+  call void @__quantum__rt__callable_invoke(%Callable* %action, %Tuple* %25, %Tuple* %28)
+  %29 = bitcast %Tuple* %28 to { i1 }*
+  %30 = getelementptr inbounds { i1 }, { i1 }* %29, i32 0, i32 0
+  %31 = load i1, i1* %30, align 1
+  %32 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %21, i64 %idx)
+  %33 = bitcast i8* %32 to i1*
+  store i1 %31, i1* %33, align 1
+  call void @__quantum__rt__array_update_alias_count(%Array* %21, i32 1)
+  store %Array* %21, %Array** %retval, align 8
+  call void @__quantum__rt__array_update_reference_count(%Array* %20, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %25, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %28, i32 -1)
+  br label %exiting__2
+
+exiting__2:                                       ; preds = %body__2
+  %34 = add i64 %idx, 1
+  br label %header__2
+
+exit__2:                                          ; preds = %header__2
+  %35 = load %Array*, %Array** %retval, align 8
+  call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__callable_update_alias_count(%Callable* %action, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %array, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %35, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %5, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %8, i32 -1)
+  ret %Array* %35
+}
+
+define internal void @SNIPPET__TeleportClassicalMessage__body__wrapper(%Tuple* %capture-tuple, %Tuple* %arg-tuple, %Tuple* %result-tuple) {
+entry:
+  %0 = bitcast %Tuple* %arg-tuple to { i1 }*
+  %1 = getelementptr inbounds { i1 }, { i1 }* %0, i32 0, i32 0
+  %2 = load i1, i1* %1, align 1
+  %3 = call i1 @SNIPPET__TeleportClassicalMessage__body(i1 %2)
+  %4 = bitcast %Tuple* %result-tuple to { i1 }*
+  %5 = getelementptr inbounds { i1 }, { i1 }* %4, i32 0, i32 0
+  store i1 %3, i1* %5, align 1
+  ret void
+}
+
+declare i64 @__quantum__rt__array_get_size_1d(%Array*)
+
+declare %String* @__quantum__rt__string_create(i8*)
+
+declare void @__quantum__rt__string_update_reference_count(%String*, i32)
+
+declare void @__quantum__rt__message(%String*)
+
+declare void @__quantum__rt__capture_update_reference_count(%Callable*, i32)
+
+declare void @__quantum__rt__callable_update_reference_count(%Callable*, i32)
+
+declare void @__quantum__rt__array_update_reference_count(%Array*, i32)
+
+define internal i1 @SNIPPET__int2bool__body(i64 %bit) {
+entry:
+  %0 = icmp eq i64 %bit, 1
+  br i1 %0, label %then0__1, label %else__1
+
+then0__1:                                         ; preds = %entry
+  ret i1 true
+
+else__1:                                          ; preds = %entry
+  ret i1 false
+
+continue__1:                                      ; No predecessors!
+  unreachable
+}
+
+define internal i1 @SNIPPET__TeleportClassicalMessage__body(i1 %message) {
+entry:
+  %msg = call %Qubit* @__quantum__rt__qubit_allocate()
+  %target = call %Qubit* @__quantum__rt__qubit_allocate()
+  br i1 %message, label %then0__1, label %continue__1
+
+then0__1:                                         ; preds = %entry
+  call void @__quantum__qis__x__body(%Qubit* %msg)
+  br label %continue__1
+
+continue__1:                                      ; preds = %then0__1, %entry
+  call void @SNIPPET__Teleport__body(%Qubit* %msg, %Qubit* %target)
+  %0 = call %Result* @Microsoft__Quantum__Measurement__MResetZ__body(%Qubit* %target)
+  %1 = call %Result* @__quantum__rt__result_get_one()
+  %2 = call i1 @__quantum__rt__result_equal(%Result* %0, %Result* %1)
+  call void @__quantum__rt__result_update_reference_count(%Result* %0, i32 -1)
+  call void @__quantum__rt__qubit_release(%Qubit* %msg)
+  call void @__quantum__rt__qubit_release(%Qubit* %target)
+  ret i1 %2
+}
+
+define internal void @SNIPPET__Teleport__body(%Qubit* %msg, %Qubit* %target) {
+entry:
+  %register = call %Qubit* @__quantum__rt__qubit_allocate()
+  call void @__quantum__qis__h__body(%Qubit* %register)
+  call void @Microsoft__Quantum__Intrinsic__CNOT__body(%Qubit* %register, %Qubit* %target)
+  call void @Microsoft__Quantum__Intrinsic__CNOT__body(%Qubit* %msg, %Qubit* %register)
+  call void @__quantum__qis__h__body(%Qubit* %msg)
+  %0 = call %Result* @Microsoft__Quantum__Measurement__MResetZ__body(%Qubit* %msg)
+  %1 = call %Result* @__quantum__rt__result_get_one()
+  %2 = call i1 @__quantum__rt__result_equal(%Result* %0, %Result* %1)
+  call void @__quantum__rt__result_update_reference_count(%Result* %0, i32 -1)
+  br i1 %2, label %then0__1, label %continue__1
+
+then0__1:                                         ; preds = %entry
+  call void @__quantum__qis__z__body(%Qubit* %target)
+  br label %continue__1
+
+continue__1:                                      ; preds = %then0__1, %entry
+  %3 = call %Result* @Microsoft__Quantum__Measurement__MResetZ__body(%Qubit* %register)
+  %4 = call i1 @Microsoft__Quantum__Canon__IsResultOne__body(%Result* %3)
+  call void @__quantum__rt__result_update_reference_count(%Result* %3, i32 -1)
+  br i1 %4, label %then0__2, label %continue__2
+
+then0__2:                                         ; preds = %continue__1
+  call void @__quantum__qis__x__body(%Qubit* %target)
+  br label %continue__2
+
+continue__2:                                      ; preds = %then0__2, %continue__1
+  call void @__quantum__rt__qubit_release(%Qubit* %register)
+  ret void
+}
+
+declare %Qubit* @__quantum__rt__qubit_allocate()
+
+declare %Array* @__quantum__rt__qubit_allocate_array(i64)
+
+declare void @__quantum__rt__qubit_release(%Qubit*)
+
+declare void @__quantum__qis__h__body(%Qubit*)
+
+define internal void @Microsoft__Quantum__Intrinsic__CNOT__body(%Qubit* %control, %Qubit* %target) {
+entry:
+  %__controlQubits__ = call %Array* @__quantum__rt__array_create_1d(i32 8, i64 1)
+  %0 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %__controlQubits__, i64 0)
+  %1 = bitcast i8* %0 to %Qubit**
+  store %Qubit* %control, %Qubit** %1, align 8
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  call void @__quantum__qis__x__ctl(%Array* %__controlQubits__, %Qubit* %target)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+define internal %Result* @Microsoft__Quantum__Measurement__MResetZ__body(%Qubit* %target) {
+entry:
+  %result = call %Result* @Microsoft__Quantum__Intrinsic__M__body(%Qubit* %target)
+  %0 = call %Result* @__quantum__rt__result_get_one()
+  %1 = call i1 @__quantum__rt__result_equal(%Result* %result, %Result* %0)
+  br i1 %1, label %then0__1, label %continue__1
+
+then0__1:                                         ; preds = %entry
+  call void @__quantum__qis__x__body(%Qubit* %target)
+  br label %continue__1
+
+continue__1:                                      ; preds = %then0__1, %entry
+  ret %Result* %result
+}
+
+declare %Result* @__quantum__rt__result_get_one()
+
+declare i1 @__quantum__rt__result_equal(%Result*, %Result*)
+
+declare void @__quantum__rt__result_update_reference_count(%Result*, i32)
+
+declare void @__quantum__qis__z__body(%Qubit*)
+
+define internal i1 @Microsoft__Quantum__Canon__IsResultOne__body(%Result* %input) {
+entry:
+  %0 = call %Result* @__quantum__rt__result_get_one()
+  %1 = call i1 @__quantum__rt__result_equal(%Result* %input, %Result* %0)
+  ret i1 %1
+}
+
+declare void @__quantum__qis__x__body(%Qubit*)
+
+declare void @__quantum__rt__capture_update_alias_count(%Callable*, i32)
+
+declare void @__quantum__rt__callable_update_alias_count(%Callable*, i32)
+
+declare void @__quantum__rt__callable_invoke(%Callable*, %Tuple*, %Tuple*)
+
+declare %Tuple* @__quantum__rt__tuple_create(i64)
+
+declare %Array* @__quantum__rt__array_copy(%Array*, i1)
+
+declare void @__quantum__rt__tuple_update_reference_count(%Tuple*, i32)
+
+define internal %Result* @Microsoft__Quantum__Intrinsic__M__body(%Qubit* %qubit) {
+entry:
+  %bases = call %Array* @__quantum__rt__array_create_1d(i32 1, i64 1)
+  %0 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %bases, i64 0)
+  %1 = bitcast i8* %0 to i2*
+  store i2 -2, i2* %1, align 1
+  call void @__quantum__rt__array_update_alias_count(%Array* %bases, i32 1)
+  %qubits = call %Array* @__quantum__rt__array_create_1d(i32 8, i64 1)
+  %2 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %qubits, i64 0)
+  %3 = bitcast i8* %2 to %Qubit**
+  store %Qubit* %qubit, %Qubit** %3, align 8
+  call void @__quantum__rt__array_update_alias_count(%Array* %qubits, i32 1)
+  %4 = call %Result* @__quantum__qis__measure__body(%Array* %bases, %Array* %qubits)
+  call void @__quantum__rt__array_update_alias_count(%Array* %bases, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %qubits, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %bases, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %qubits, i32 -1)
+  ret %Result* %4
+}
+
+declare void @__quantum__qis__x__ctl(%Array*, %Qubit*)
+
+define internal void @Microsoft__Quantum__Intrinsic__CNOT__adj(%Qubit* %control, %Qubit* %target) {
+entry:
+  call void @Microsoft__Quantum__Intrinsic__CNOT__body(%Qubit* %control, %Qubit* %target)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__CNOT__ctl(%Array* %__controlQubits__, { %Qubit*, %Qubit* }* %0) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  %1 = getelementptr inbounds { %Qubit*, %Qubit* }, { %Qubit*, %Qubit* }* %0, i32 0, i32 0
+  %control = load %Qubit*, %Qubit** %1, align 8
+  %2 = getelementptr inbounds { %Qubit*, %Qubit* }, { %Qubit*, %Qubit* }* %0, i32 0, i32 1
+  %target = load %Qubit*, %Qubit** %2, align 8
+  %3 = call %Array* @__quantum__rt__array_create_1d(i32 8, i64 1)
+  %4 = call i8* @__quantum__rt__array_get_element_ptr_1d(%Array* %3, i64 0)
+  %5 = bitcast i8* %4 to %Qubit**
+  store %Qubit* %control, %Qubit** %5, align 8
+  %__controlQubits__1 = call %Array* @__quantum__rt__array_concatenate(%Array* %__controlQubits__, %Array* %3)
+  call void @__quantum__rt__array_update_reference_count(%Array* %__controlQubits__1, i32 1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__1, i32 1)
+  call void @__quantum__qis__x__ctl(%Array* %__controlQubits__1, %Qubit* %target)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__1, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %3, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %__controlQubits__1, i32 -1)
+  call void @__quantum__rt__array_update_reference_count(%Array* %__controlQubits__1, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+declare %Array* @__quantum__rt__array_concatenate(%Array*, %Array*)
+
+define internal void @Microsoft__Quantum__Intrinsic__CNOT__ctladj(%Array* %__controlQubits__, { %Qubit*, %Qubit* }* %0) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  %1 = getelementptr inbounds { %Qubit*, %Qubit* }, { %Qubit*, %Qubit* }* %0, i32 0, i32 0
+  %control = load %Qubit*, %Qubit** %1, align 8
+  %2 = getelementptr inbounds { %Qubit*, %Qubit* }, { %Qubit*, %Qubit* }* %0, i32 0, i32 1
+  %target = load %Qubit*, %Qubit** %2, align 8
+  %3 = call %Tuple* @__quantum__rt__tuple_create(i64 ptrtoint ({ %Qubit*, %Qubit* }* getelementptr ({ %Qubit*, %Qubit* }, { %Qubit*, %Qubit* }* null, i32 1) to i64))
+  %4 = bitcast %Tuple* %3 to { %Qubit*, %Qubit* }*
+  %5 = getelementptr inbounds { %Qubit*, %Qubit* }, { %Qubit*, %Qubit* }* %4, i32 0, i32 0
+  %6 = getelementptr inbounds { %Qubit*, %Qubit* }, { %Qubit*, %Qubit* }* %4, i32 0, i32 1
+  store %Qubit* %control, %Qubit** %5, align 8
+  store %Qubit* %target, %Qubit** %6, align 8
+  call void @Microsoft__Quantum__Intrinsic__CNOT__ctl(%Array* %__controlQubits__, { %Qubit*, %Qubit* }* %4)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  call void @__quantum__rt__tuple_update_reference_count(%Tuple* %3, i32 -1)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__H__body(%Qubit* %qubit) {
+entry:
+  call void @__quantum__qis__h__body(%Qubit* %qubit)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__H__adj(%Qubit* %qubit) {
+entry:
+  call void @__quantum__qis__h__body(%Qubit* %qubit)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__H__ctl(%Array* %__controlQubits__, %Qubit* %qubit) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  call void @__quantum__qis__h__ctl(%Array* %__controlQubits__, %Qubit* %qubit)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+declare void @__quantum__qis__h__ctl(%Array*, %Qubit*)
+
+define internal void @Microsoft__Quantum__Intrinsic__H__ctladj(%Array* %__controlQubits__, %Qubit* %qubit) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  call void @__quantum__qis__h__ctl(%Array* %__controlQubits__, %Qubit* %qubit)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+declare %Result* @__quantum__qis__measure__body(%Array*, %Array*)
+
+define internal %Result* @Microsoft__Quantum__Intrinsic__Measure__body(%Array* %bases, %Array* %qubits) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %bases, i32 1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %qubits, i32 1)
+  %0 = call %Result* @__quantum__qis__measure__body(%Array* %bases, %Array* %qubits)
+  call void @__quantum__rt__array_update_alias_count(%Array* %bases, i32 -1)
+  call void @__quantum__rt__array_update_alias_count(%Array* %qubits, i32 -1)
+  ret %Result* %0
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__X__body(%Qubit* %qubit) {
+entry:
+  call void @__quantum__qis__x__body(%Qubit* %qubit)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__X__adj(%Qubit* %qubit) {
+entry:
+  call void @__quantum__qis__x__body(%Qubit* %qubit)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__X__ctl(%Array* %__controlQubits__, %Qubit* %qubit) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  call void @__quantum__qis__x__ctl(%Array* %__controlQubits__, %Qubit* %qubit)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__X__ctladj(%Array* %__controlQubits__, %Qubit* %qubit) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  call void @__quantum__qis__x__ctl(%Array* %__controlQubits__, %Qubit* %qubit)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__Z__body(%Qubit* %qubit) {
+entry:
+  call void @__quantum__qis__z__body(%Qubit* %qubit)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__Z__adj(%Qubit* %qubit) {
+entry:
+  call void @__quantum__qis__z__body(%Qubit* %qubit)
+  ret void
+}
+
+define internal void @Microsoft__Quantum__Intrinsic__Z__ctl(%Array* %__controlQubits__, %Qubit* %qubit) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  call void @__quantum__qis__z__ctl(%Array* %__controlQubits__, %Qubit* %qubit)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+declare void @__quantum__qis__z__ctl(%Array*, %Qubit*)
+
+define internal void @Microsoft__Quantum__Intrinsic__Z__ctladj(%Array* %__controlQubits__, %Qubit* %qubit) {
+entry:
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 1)
+  call void @__quantum__qis__z__ctl(%Array* %__controlQubits__, %Qubit* %qubit)
+  call void @__quantum__rt__array_update_alias_count(%Array* %__controlQubits__, i32 -1)
+  ret void
+}
+
+define void @ENTRYPOINT__Greetings__Interop() #0 {
+entry:
+  call void @ENTRYPOINT__Greetings__body()
+  ret void
+}
+
+define void @ENTRYPOINT__Greetings() #1 {
+entry:
+  call void @ENTRYPOINT__Greetings__body()
+  %0 = call %String* @__quantum__rt__string_create(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @2, i32 0, i32 0))
+  call void @__quantum__rt__message(%String* %0)
+  call void @__quantum__rt__string_update_reference_count(%String* %0, i32 -1)
+  ret void
+}
+
+attributes #0 = { &quot;InteropFriendly&quot; }
+attributes #1 = { &quot;EntryPoint&quot; }
+</code></pre></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "iqsharp"
+        },
+        kernelOptions: {
+            kernelName: "iqsharp",
+            path: "./tutorials/qir-gen-qsharp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'iqsharp'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../../index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Community Documentation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../qir-python.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">QIR with Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The QIR Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
