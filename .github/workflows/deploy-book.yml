@@ -24,10 +24,12 @@ jobs:
       with:
         activate-environment: qir-book
         environment-file: environment.yml
+    - name: Initialize conda
+      run: |
+        conda init
     # Build the book
     - name: Build the book
       run: |
-        conda init
         conda activate qir-book
         jupyter-book build ./qir-book
     # Push the book's HTML to github-pages
