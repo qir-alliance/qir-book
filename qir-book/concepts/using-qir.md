@@ -19,8 +19,8 @@
 
 ### `qcor`
 
-- Movements between abstraction levels (XACC and MLIR dialect)
-- MLIR --> quantum instructions = stand-alone DSL{cite}`mccaskey2021extending`
+- Movements between abstraction levels (XACC and MLIR dialect) {cite}`mlirTN`
+- MLIR --> quantum instructions = stand-alone DSL {cite}`mccaskey2021extending`
 
 ## Simulation
 

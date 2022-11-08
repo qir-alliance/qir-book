@@ -10,6 +10,9 @@ on:
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     steps:
     - uses: actions/checkout@v2
 
@@ -20,11 +23,14 @@ jobs:
         python-version: 3.7
 
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        activate-environment: qir-book
+        environment-file: environment.yml
     # Build the book
     - name: Build the book
       run: |
+        conda activate qir-book
         jupyter-book build ./qir-book
     # Push the book's HTML to github-pages
     - name: GitHub Pages action

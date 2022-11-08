@@ -3,7 +3,8 @@ root: index
 parts:
 - caption: Tutorials
   chapters:
-  - file: tutorials/qir-gen-qsharp
+  - file: tutorials/qir-gen-qsharp/qsharp-magic
+    title: QIR with Q#
   - file: tutorials/qir-python
   - file: tutorials/qat-optimization
   - file: tutorials/visualize-qir
@@ -27,5 +28,5 @@ parts:
   - file: tools
     title: QIR book toolchain
   - file: cite
-  - file: reference/_changelog
+  # - file: reference/_changelog
   # - file: genindex
