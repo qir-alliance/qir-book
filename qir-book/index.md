@@ -11,7 +11,7 @@ If you have any examples, projects, or ideas on what you might like to see here,
 :padding: 2
 For contributors 👩‍💻
 ^^^
-Read our [Contributing Guide](reference/_contributing.md) to learn about how to add to this book, and see [Discord (#qir channel)](https://discord.unitary.fund) to ask questions and help others in the community.
+Read our [Contributing Guide](reference/_contributing.md) to learn about how to add to this book, and see [Discord](https://discord.gg/unitary-fund-764231928676089909) to ask questions and help others in the community.
 :::
 
 :::{grid-item-card}

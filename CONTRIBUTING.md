@@ -1,52 +1,119 @@
-# Contributing
+# QIR Alliance Contribution Policy 1.0
 
-Thank you for your interest in contributing to QIR book!
+This document provides the contribution policy for specifications and other
+documents developed using the QIR Alliance Specification development process in
+a repository (each a “Working Group”). Additional or alternate contribution
+policies may be adopted and documented by the Working Group.
 
-There are many ways in which you can contribute to the book, whether by contributing a feature or by engaging in discussions; we value contributions in all shapes and sizes! The following sections may give some ideas for how you can get involved.
+## Contribution Guidelines
 
-## Asking and Answering Questions
+The Working Group accepts contributions via pull requests. The following
+sections outlines the process for merging contributions to the specification.
 
-Have a question?
-This repository is a great place to ask questions about what QIR is, why do we need it, and how to use QIR with any platform or tooling.
-Your question will serve as resource to others searching for help.
-Please file an issue to ask your question [here](https://github.com/crazy4pi314/qir-book/issues/new).
+### 1. Issues
 
-Or maybe you have figured out how that hard-to-understand concept works? Share your knowledge!
-If you are interested in contributing to the documentation around QIR and its tools, please follow the standard development process on the respective repository to improve the materials.
+Issues are used as the primary method for tracking anything to do with the
+specification Working Group.
 
-## Reporting and Commenting on Issues
+#### 1.1. Issue Types
 
-Have you identified an issue or modification that would benefit the QIR community more broadly than the scope of this documentation?
-We want to hear about it!
-If you have feedback about the content in this repository, please let us know by filing a [new issue](https://github.com/crazy4pi314/qir-book/issues/new)!
+There are three types of issues (each with their own corresponding label):
 
-As for any active effort, there are always many ways in which we hope to evolve and improve the specification and tools.
-We encourage you to look at the list of currently [open issues](https://github.com/crazy4pi314/qir-book/issues) to share your ideas and expertise.
+- **Discussion** <br/>
+  These are support or functionality inquiries that we want to have a record of
+  for future reference. Depending on the discussion, these can turn into "Spec
+  Change" issues.
 
-## Contributing Code
+- **Proposal** <br/>
+  Used for items that propose a new ideas or functionality that require a larger
+  discussion. This allows for feedback from others before a specification change
+  is actually written. All issues that are proposals should both have a label
+  and an issue title of "Proposal: [the rest of the title]." A proposal can
+  become a "Spec Change" and does not require a milestone.
 
-If you are interested in helping fix issues you or someone else encountered, please make sure that the corresponding issue has been filed on the repository.
-Check that nobody is currently working on it and that it has indeed been marked as bug.
-If that's the case, indicate on the issue that you are working on it, and link to the corresponding GitHub page where the fix is being developed.
-If someone is already working on a fix, ask if you can help or see what other things can be done.
-If an issue is labeled as feature, please follow the guidelines related to contributing features.
-If an issue has not been labeled yet, please indicate that you would like to work on it and be patient - we are a small team and are doing our best to be quick with responding to your inquiry!
+- **Spec Change** <br/>
+  These track specific spec changes and ideas until they are complete. They can
+  evolve from "Proposal" and "Discussion" items, or can be submitted
+  individually depending on the size. Each spec change should be placed into a
+  milestone.
 
-If you are interested in contributing a new feature, please first check if a similar functionality has already been requested.
-If so, consider contributing to the discussion around it rather than filing a separate issue.
-If no open or closed issue with such a request already exists, please file one following the [feature request template](https://github.com/crazy4pi314/qir-book/issues/new?assignees=&labels=feature&template=feature_request.md&title=).
-We will respond to feature requests and follow up with a discussion around its feasibility, how one might go about implementing it, and whether that is something that makes sense to add.
-There are several reasons why we might not be able to eventually merge even a great feature.
-Perhaps most commonly, a contribution is a really good one, but this isn't the right place to develop it or we simply aren't ready to maintain and develop it further.
-It can be difficult to do everything, so we are careful to prioritize the quality and reliability across the code base over new features.
-In such cases, we strongly encourage you to pursue your passion project in your own fork, and welcome sharing and discussing your thoughts and progress on the corresponding issue regardless.
-We'll also ask for changes to a pull request if it requires more documentation or unit tests to better make use of it.
+#### 1.2. Issue Lifecycle
 
-If you are looking for a place to get started with contributing code, search for example for the [good-first-issue](https://github.com/crazy4pi314/qir-book/labels/good%20first%20issue) or [help-wanted](https://github.com/crazy4pi314/qir-book/labels/help%20wanted) labels. Also, look for issues that have already been discussed in more detail, and check if you can help someone who has already started working on it.
+The issue lifecycle is mainly driven by the Maintainer. All issue types follow
+the same general lifecycle. Differences are noted below.
 
-And last but not least:
+- **Issue Creation**
 
-## Thank You
+- **Triage**
 
-Your contributions to open source, large or small, make great projects like this possible.
-Thank you for taking the time to contribute.
+  - The Editor in charge of triaging will apply the proper labels for the issue.
+This includes labels for priority, type, and metadata.
+  - (If needed) Clean up the title to succinctly and clearly state the issue. Also
+ensure that proposals are prefaced with "Proposal".
+
+- **Discussion**
+
+  - "Spec Change" issues should be connected to the pull request that resolves it.
+  - Whoever is working on a "Spec Change" issue should either assign the issue to
+    themselves or make a comment in the issue saying that they are taking it.
+  - "Proposal" and "Discussion" issues should stay open until resolved.
+
+- **Issue Closure**
+
+### 2. Pull Requests
+
+The next section contains more information on the workflow followed for Pull
+Requests.
+
+#### 2.1. Pull Request Creation
+
+- We welcome pull requests that are currently in progress. They are a great way
+  to keep track of important work that is in-flight, but useful for others to
+  see. If a pull request is a work in progress, it should be prefaced with "WIP:
+  [title]". You should also add the wip label Once the pull request is ready for
+  review, remove "WIP" from the title and label.
+
+- It is preferred, but not required, to have a pull request tied to a specific
+  issue. There can be circumstances where if it is a quick fix then an issue
+  might be overkill. The details provided in the pull request description would
+  suffice in this case.
+
+- The Working Group uses pull requests to track changes. To submit a change to the
+specification:
+
+  1) Fork the Repo, modify the Specification to address the Issue
+  2) Submit a Pull Request
+
+#### 2.2. Triage
+
+The Editor in charge of triaging will apply the proper labels for the issue.
+This should include at least a size label, a milestone, and awaiting review once
+all labels are applied.
+
+#### 2.3. Reviewing/Discussion
+
+- All reviews will be completed using the review tool.
+- A "Comment" review should be used when there are questions about the spec that
+  should be answered, but that don't involve spec changes. This type of review
+  does not count as approval.
+- A "Changes Requested" review indicates that changes to the spec need to be
+  made before they will be merged.
+- Reviewers should update labels as needed (such as needs rebase).
+- When a review is approved, the reviewer should add LGTM as a comment.
+- Final approval is required by a designated Editor. Merging is blocked without
+  this final approval. Editors will factor reviews from all other reviewers into
+  their approval process.
+
+#### 2.4. Being Responsive
+
+Pull request owner should try to be responsive to comments by answering
+questions or changing text. Once all comments have been addressed, the pull
+request is ready to be merged.
+
+#### 2.5. Merge or Close
+
+- A pull request should stay open until a Maintainer has marked the pull request
+  as approved.
+- Pull requests can be closed by the author without merging.
+- Pull requests may be closed by a Maintainer if the decision is made that it is
+  not going to be merged.
