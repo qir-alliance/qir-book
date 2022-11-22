@@ -1,6 +1,6 @@
 # QIR Ecosystem projects
 
-Want to add your project? Check out the [sample card format](https://github.com/crazy4pi314/qir-book/blob/main/qir-book/project-gallery.md?plain=1#L148) and make a PR to this page!
+Want to add your project? Check out the [sample card format](https://github.com/qir-alliance/qir-book/blob/main/qir-book/project-gallery.md?plain=1#L148) and make a PR to this page!
 
 ::::{grid} 1 2 2 2
 :class-container: landing-grid

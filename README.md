@@ -1,4 +1,4 @@
-# <img src="https://github.com/crazy4pi314/qir-book/blob/main/qir-book/assets/logo.svg?raw=true" />
+# <img src="https://github.com/qir-alliance/qir-book/blob/main/qir-book/assets/logo.svg?raw=true" />
 
 QIR Book is open-source documentation and examples for the quantum computing intermediate representation [QIR](http://qir-alliance.org/).
 ## Contribute or improve the book
