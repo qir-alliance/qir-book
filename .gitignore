@@ -2,3 +2,4 @@
 qir-book/_build
 **/bin
 **/obj
+.vscode/* 

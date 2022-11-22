@@ -1,6 +1,6 @@
 # How do we use it?
 
-![qirecosys-overview](../assets/qirecosys.png)
+![qirecosys-overview](qirecosys.png)
 
 ## Applications
 
