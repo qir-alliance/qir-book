@@ -545,7 +545,7 @@ operation Greetings() : Unit {
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre><code>; ModuleID = &#39;/tmp/tmpkqJECj.bc&#39;
+<div class="output text_html"><pre><code>; ModuleID = &#39;/tmp/tmppHDHpW.bc&#39;
 
 %Tuple = type opaque
 %Array = type opaque
@@ -588,10 +588,10 @@ entry:
   store %Array* %0, %Array** %binary, align 8
   call void @__quantum__rt__array_update_alias_count(%Array* %0, i32 1)
   %11 = call %Callable* @__quantum__rt__callable_create([4 x void (%Tuple*, %Tuple*, %Tuple*)*]* @SNIPPET__int2bool__FunctionTable, [2 x void (%Tuple*, i32)*]* null, %Tuple* null)
-  %msg = call %Array* @Microsoft__Quantum__Arrays___8b0ff46ba5384470987d0f55b8bddafb_ForEach__body(%Callable* %11, %Array* %0)
+  %msg = call %Array* @Microsoft__Quantum__Arrays___208f0083ff5541e38ff3fbb53121dd2c_ForEach__body(%Callable* %11, %Array* %0)
   call void @__quantum__rt__array_update_alias_count(%Array* %msg, i32 1)
   %12 = call %Callable* @__quantum__rt__callable_create([4 x void (%Tuple*, %Tuple*, %Tuple*)*]* @SNIPPET__TeleportClassicalMessage__FunctionTable, [2 x void (%Tuple*, i32)*]* null, %Tuple* null)
-  %transferred = call %Array* @Microsoft__Quantum__Arrays___be46159852c94c1a87d321eddd12a55d_ForEach__body(%Callable* %12, %Array* %msg)
+  %transferred = call %Array* @Microsoft__Quantum__Arrays___b85328fbdd7f40c8bf13221aad8d29fc_ForEach__body(%Callable* %12, %Array* %msg)
   call void @__quantum__rt__array_update_alias_count(%Array* %transferred, i32 1)
   %13 = call i64 @__quantum__rt__array_get_size_1d(%Array* %transferred)
   %14 = sub i64 %13, 1
@@ -843,7 +843,26 @@ entry:
   ret void
 }
 
-define internal %Array* @Microsoft__Quantum__Arrays___8b0ff46ba5384470987d0f55b8bddafb_ForEach__body(%Callable* %action, %Array* %array) {
+define internal %Result* @Microsoft__Quantum__Measurement__MResetZ__body(%Qubit* %target) {
+entry:
+  %result = call %Result* @Microsoft__Quantum__Intrinsic__M__body(%Qubit* %target)
+  %0 = call %Result* @__quantum__rt__result_get_one()
+  %1 = call i1 @__quantum__rt__result_equal(%Result* %result, %Result* %0)
+  br i1 %1, label %then0__1, label %continue__1
+
+then0__1:                                         ; preds = %entry
+  call void @__quantum__qis__x__body(%Qubit* %target)
+  br label %continue__1
+
+continue__1:                                      ; preds = %then0__1, %entry
+  ret %Result* %result
+}
+
+declare %Result* @__quantum__rt__result_get_one()
+
+declare i1 @__quantum__rt__result_equal(%Result*, %Result*)
+
+define internal %Array* @Microsoft__Quantum__Arrays___208f0083ff5541e38ff3fbb53121dd2c_ForEach__body(%Callable* %action, %Array* %array) {
 entry:
   %retval = alloca %Array*, align 8
   call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 1)
@@ -944,17 +963,21 @@ exit__2:                                          ; preds = %header__2
   ret %Array* %35
 }
 
-declare void @__quantum__rt__capture_update_alias_count(%Callable*, i32)
+define internal void @SNIPPET__int2bool__body__wrapper(%Tuple* %capture-tuple, %Tuple* %arg-tuple, %Tuple* %result-tuple) {
+entry:
+  %0 = bitcast %Tuple* %arg-tuple to { i64 }*
+  %1 = getelementptr inbounds { i64 }, { i64 }* %0, i32 0, i32 0
+  %2 = load i64, i64* %1, align 4
+  %3 = call i1 @SNIPPET__int2bool__body(i64 %2)
+  %4 = bitcast %Tuple* %result-tuple to { i1 }*
+  %5 = getelementptr inbounds { i1 }, { i1 }* %4, i32 0, i32 0
+  store i1 %3, i1* %5, align 1
+  ret void
+}
 
-declare void @__quantum__rt__callable_update_alias_count(%Callable*, i32)
+declare %Callable* @__quantum__rt__callable_create([4 x void (%Tuple*, %Tuple*, %Tuple*)*]*, [2 x void (%Tuple*, i32)*]*, %Tuple*)
 
-declare i64 @__quantum__rt__array_get_size_1d(%Array*)
-
-declare void @__quantum__rt__callable_invoke(%Callable*, %Tuple*, %Tuple*)
-
-declare %Array* @__quantum__rt__array_copy(%Array*, i1)
-
-define internal %Array* @Microsoft__Quantum__Arrays___be46159852c94c1a87d321eddd12a55d_ForEach__body(%Callable* %action, %Array* %array) {
+define internal %Array* @Microsoft__Quantum__Arrays___b85328fbdd7f40c8bf13221aad8d29fc_ForEach__body(%Callable* %action, %Array* %array) {
 entry:
   %retval = alloca %Array*, align 8
   call void @__quantum__rt__capture_update_alias_count(%Callable* %action, i32 1)
@@ -1055,46 +1078,6 @@ exit__2:                                          ; preds = %header__2
   ret %Array* %35
 }
 
-define internal i1 @Microsoft__Quantum__Canon__IsResultOne__body(%Result* %input) {
-entry:
-  %0 = call %Result* @__quantum__rt__result_get_one()
-  %1 = call i1 @__quantum__rt__result_equal(%Result* %input, %Result* %0)
-  ret i1 %1
-}
-
-declare %Result* @__quantum__rt__result_get_one()
-
-declare i1 @__quantum__rt__result_equal(%Result*, %Result*)
-
-define internal %Result* @Microsoft__Quantum__Measurement__MResetZ__body(%Qubit* %target) {
-entry:
-  %result = call %Result* @Microsoft__Quantum__Intrinsic__M__body(%Qubit* %target)
-  %0 = call %Result* @__quantum__rt__result_get_one()
-  %1 = call i1 @__quantum__rt__result_equal(%Result* %result, %Result* %0)
-  br i1 %1, label %then0__1, label %continue__1
-
-then0__1:                                         ; preds = %entry
-  call void @__quantum__qis__x__body(%Qubit* %target)
-  br label %continue__1
-
-continue__1:                                      ; preds = %then0__1, %entry
-  ret %Result* %result
-}
-
-define internal void @SNIPPET__int2bool__body__wrapper(%Tuple* %capture-tuple, %Tuple* %arg-tuple, %Tuple* %result-tuple) {
-entry:
-  %0 = bitcast %Tuple* %arg-tuple to { i64 }*
-  %1 = getelementptr inbounds { i64 }, { i64 }* %0, i32 0, i32 0
-  %2 = load i64, i64* %1, align 4
-  %3 = call i1 @SNIPPET__int2bool__body(i64 %2)
-  %4 = bitcast %Tuple* %result-tuple to { i1 }*
-  %5 = getelementptr inbounds { i1 }, { i1 }* %4, i32 0, i32 0
-  store i1 %3, i1* %5, align 1
-  ret void
-}
-
-declare %Callable* @__quantum__rt__callable_create([4 x void (%Tuple*, %Tuple*, %Tuple*)*]*, [2 x void (%Tuple*, i32)*]*, %Tuple*)
-
 define internal void @SNIPPET__TeleportClassicalMessage__body__wrapper(%Tuple* %capture-tuple, %Tuple* %arg-tuple, %Tuple* %result-tuple) {
 entry:
   %0 = bitcast %Tuple* %arg-tuple to { i1 }*
@@ -1106,6 +1089,8 @@ entry:
   store i1 %3, i1* %5, align 1
   ret void
 }
+
+declare i64 @__quantum__rt__array_get_size_1d(%Array*)
 
 declare %String* @__quantum__rt__string_create(i8*)
 
@@ -1192,6 +1177,21 @@ declare %Array* @__quantum__rt__qubit_allocate_array(i64)
 declare void @__quantum__rt__qubit_release(%Qubit*)
 
 declare void @__quantum__rt__result_update_reference_count(%Result*, i32)
+
+define internal i1 @Microsoft__Quantum__Canon__IsResultOne__body(%Result* %input) {
+entry:
+  %0 = call %Result* @__quantum__rt__result_get_one()
+  %1 = call i1 @__quantum__rt__result_equal(%Result* %input, %Result* %0)
+  ret i1 %1
+}
+
+declare void @__quantum__rt__capture_update_alias_count(%Callable*, i32)
+
+declare void @__quantum__rt__callable_update_alias_count(%Callable*, i32)
+
+declare void @__quantum__rt__callable_invoke(%Callable*, %Tuple*, %Tuple*)
+
+declare %Array* @__quantum__rt__array_copy(%Array*, i1)
 
 define void @ENTRYPOINT__Greetings__Interop() #0 {
 entry:
