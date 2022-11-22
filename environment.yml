@@ -23,6 +23,8 @@ dependencies:
   - pandas==1.5.0
   - ipykernel==6.15
   - pytest==7.2.0
+  - cmake
+  - clang
   # - graphviz==2.50
   - pip:
     - sphinx-design==0.1.0

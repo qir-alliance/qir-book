@@ -1,5 +1,6 @@
 # <img src="https://github.com/crazy4pi314/qir-book/blob/main/qir-book/assets/logo.svg?raw=true" />
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://parianaghavi-fictional-journey-7x7qpq7wg6qcwxrp.github.dev/)
+<br/><br/>
 [![Discord](https://img.shields.io/discord/764231928676089909)](https://discord.gg/unitary-fund-764231928676089909)
 ![GoodFirstIssue](https://img.shields.io/badge/good%20first%20issue-0%20open-green)
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
