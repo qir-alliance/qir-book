@@ -1,21 +1,21 @@
-FROM mcr.microsoft.com/vscode/devcontainers/universal:latest AS qat-build
-ADD https://apt.llvm.org/llvm-snapshot.gpg.key /llvm-snapshot.gpg.key
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && \
-    apt-get install -y git gnupg2 software-properties-common cmake && \
-    apt-key add /llvm-snapshot.gpg.key && \
-    add-apt-repository "deb https://apt.llvm.org/jammy/ llvm-toolchain-jammy-14 main" && \
-    apt-get -y update && \
-    apt-get -y install clang-14 clang-format-14 clang-tidy-14 llvm-14 && \
-    apt autoremove -y && \
-    apt-get clean && rm -rf /var/lib/apt/lists/
-ENV CC=clang-14 CXX=clang++-14 SHELL=/usr/bin/bash
-RUN mkdir /qat && \
-    git clone --depth 1 --recursive https://github.com/qir-alliance/qat.git /qat && \
-    mkdir /qat/Debug && \
-    cd /qat/Debug && \
-    cmake .. && \
-    make qat
+# FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04 AS qat-build
+# ADD https://apt.llvm.org/llvm-snapshot.gpg.key /llvm-snapshot.gpg.key
+# ARG DEBIAN_FRONTEND=noninteractive
+# RUN apt-get update && \
+#     apt-get install -y git gnupg2 software-properties-common cmake && \
+#     apt-key add /llvm-snapshot.gpg.key && \
+#     add-apt-repository "deb https://apt.llvm.org/jammy/ llvm-toolchain-jammy-14 main" && \
+#     apt-get -y update && \
+#     apt-get -y install clang-14 clang-format-14 clang-tidy-14 llvm-14 && \
+#     apt autoremove -y && \
+#     apt-get clean && rm -rf /var/lib/apt/lists/
+# ENV CC=clang-14 CXX=clang++-14 SHELL=/usr/bin/bash
+# RUN mkdir /qat && \
+#     git clone --depth 1 --recursive https://github.com/qir-alliance/qat.git /qat && \
+#     mkdir /qat/Debug && \
+#     cd /qat/Debug && \
+#     cmake .. && \
+#     make qat
 
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/python-3-anaconda/.devcontainer/base.Dockerfile
 
@@ -49,4 +49,4 @@ RUN curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash && \
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
-COPY --from=qat-build /qat/Debug/qir/qat/Apps/qat /bin/qat
+# COPY --from=qat-build /qat/Debug/qir/qat/Apps/qat /bin/qat
