@@ -15,10 +15,10 @@ dependencies:
   - llvm-tools=13
   - iqsharp==0.27.238334
   - qsharp==0.27.238334
-  - pyquil==1.9.0
+  #- pyquil==1.9.0
   - autopep8==1.6.0
   - click==7.1.2
-  - lit==12.0.1 
+  - lit==12.0.1
   - toml==0.10.2
   - pandas==1.5.0
   - ipykernel==6.15
@@ -31,4 +31,5 @@ dependencies:
     - git+https://github.com/crazy4pi314/qutip-qip@crazy4pi314/record-output#egg=qutip_qip
     - qutip==4.7.0
     - pyqir==0.6.2
-    - azure-quantum==0.27.238334
+    #- azure-quantum==0.27.238334
+    - qiskit_qir

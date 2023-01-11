@@ -1,7 +1,4 @@
-<!-- Find the updated version of the project file for QIR emission:
- https://github.com/microsoft/qsharp-compiler/blob/main/examples/QIR/Emission/Emission.csproj  -->
-
-<Project Sdk="Microsoft.Quantum.Sdk/0.25.228311">
+<Project Sdk="Microsoft.Quantum.Sdk/0.27.244707">
 
   <PropertyGroup>
     <QscVerbosity>Detailed</QscVerbosity>

@@ -3,9 +3,12 @@ root: index
 parts:
 - caption: Tutorials
   chapters:
-  - file: tutorials/qir-gen-qsharp/qsharp-magic
-    title: QIR with Q#
-  - file: tutorials/qir-python
+  - file: tutorials/qir-emission
+    sections:
+    - file: qir-book/tutorials/qir-emission/qsharp/in_jupyter/qsharp-magic
+    - file: tutorials/qir-emission/qutip/qir-gen
+    - file: tutorials/qir-emission/qiskit/qir-gen
+    - file: tutorials/qir-emission/pennylane/qir-gen
   - file: tutorials/qat-optimization
   - file: tutorials/visualize-qir
 
