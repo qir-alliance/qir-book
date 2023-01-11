@@ -5,7 +5,7 @@ parts:
   chapters:
   - file: tutorials/qir-emission
     sections:
-    - file: qir-book/tutorials/qir-emission/qsharp/in_jupyter/qsharp-magic
+    - file: tutorials/qir-emission/qsharp/in_jupyter/qsharp-magic
     - file: tutorials/qir-emission/qutip/qir-gen
     - file: tutorials/qir-emission/qiskit/qir-gen
     - file: tutorials/qir-emission/pennylane/qir-gen
