@@ -23,13 +23,15 @@ dependencies:
   - pandas==1.5.0
   - ipykernel==6.15
   - pytest==7.2.0
+  - pennylane==0.23.0
+  # - cirq
   # - graphviz==2.50
   - pip:
     - sphinx-design==0.1.0
     - jupyter-book==0.13.1
     - lit==12.0.1
     #- git+https://github.com/crazy4pi314/qutip-qip@crazy4pi314/record-output#egg=qutip_qip
-    - qutip
-    #- pyqir==0.6.2
+    - qutip-qip
+    - pyqir
     #- azure-quantum==0.27.238334
     - qiskit_qir

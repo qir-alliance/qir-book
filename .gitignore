@@ -2,4 +2,5 @@
 qir-book/_build
 **/bin
 **/obj
-.vscode/* 
+.vscode/*
+__pycache__/
