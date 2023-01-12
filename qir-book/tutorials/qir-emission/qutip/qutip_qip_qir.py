@@ -1,3 +1,4 @@
+# From: https://github.com/qutip/qutip-qip/blob/master/src/qutip_qip/qir.py
 # Needed to defer evaluating type hints so that we don't need forward
 # references and can hide type hint–only imports from runtime usage.
 from __future__ import annotations
