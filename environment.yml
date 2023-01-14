@@ -32,6 +32,6 @@ dependencies:
     - lit==12.0.1
     #- git+https://github.com/crazy4pi314/qutip-qip@crazy4pi314/record-output#egg=qutip_qip
     - qutip-qip
-    - pyqir
     #- azure-quantum==0.27.238334
-    - qiskit_qir
+    #- qiskit_qir
+    - pyqir
