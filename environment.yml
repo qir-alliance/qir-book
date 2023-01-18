@@ -12,7 +12,7 @@ dependencies:
   # Required by .NET Interactive.
   - dotnet-aspnetcore>=6.0
   - notebook==6.5.2
-  - llvm-tools=13
+  - llvm-tools
   - iqsharp==0.27.238334
   - qsharp==0.27.238334
   #- pyquil==1.9.0
@@ -24,8 +24,9 @@ dependencies:
   - ipykernel==6.15
   - pytest==7.2.0
   - pennylane==0.23.0
+  - qiskit-terra
+  - graphviz
   # - cirq
-  # - graphviz==2.50
   - pip:
     - sphinx-design==0.1.0
     - jupyter-book==0.13.1
@@ -33,5 +34,8 @@ dependencies:
     #- git+https://github.com/crazy4pi314/qutip-qip@crazy4pi314/record-output#egg=qutip_qip
     - qutip-qip
     #- azure-quantum==0.27.238334
-    #- qiskit_qir
     - pyqir
+    - qiskit-qir
+    - graphviz
+   # - pyxdg-open
+
