@@ -1,8 +1,7 @@
-# From: https://github.com/qutip/qutip-qip/blob/master/src/qutip_qip/qir.py
 # Needed to defer evaluating type hints so that we don't need forward
 # references and can hide type hint–only imports from runtime usage.
 from __future__ import annotations
-
+from qutip_qip.circuit import QubitCircuit
 from base64 import b64decode
 from enum import Enum, auto
 from operator import mod
@@ -13,19 +12,14 @@ from typing import Union, overload, TYPE_CHECKING
 if TYPE_CHECKING:
     from typing_extensions import Literal
 
+from packaging.version import parse as parse_version
 try:
-    import pyqir.generator as pqg
+    from pyqir import SimpleModule, BasicQisBuilder, Module
 except ImportError as ex:
     raise ImportError("qutip.qip.qir depends on PyQIR") from ex
 
-# try:
-#     import pyqir.parser as pqp
-# except ImportError as ex:
-#     raise ImportError("qutip.qip.qir depends on PyQIR") from ex
-
 
 from qutip_qip.circuit import QubitCircuit
-#from qutip_qip.operations import Gate, Measurement
 from qutip_qip.operations import Gate
 from qutip_qip.circuit import Measurement
 
@@ -87,7 +81,7 @@ def circuit_to_qir(
     circuit: QubitCircuit,
     format: Union[Literal[QirFormat.MODULE], Literal["module"]],
     module_name: str,
-) -> pqp.QirModule:
+) -> Module:
     ...
 
 
@@ -118,7 +112,7 @@ def circuit_to_qir(circuit, format, module_name="qutip_circuit"):
     # Define as an inner function to make it easier to call from conditional
     # branches.
     def append_operation(
-        module: pqg.SimpleModule, builder: pqg.BasicQisBuilder, op: Gate
+        module: SimpleModule, builder: BasicQisBuilder, op: Gate
     ):
         if op.classical_controls:
             result = op.classical_controls[0]
@@ -192,8 +186,8 @@ def circuit_to_qir(circuit, format, module_name="qutip_circuit"):
 
     fmt = QirFormat.ensure(format)
 
-    module = pqg.SimpleModule(module_name, circuit.N, circuit.num_cbits or 0)
-    builder = pqg.BasicQisBuilder(module.builder)
+    module = SimpleModule(module_name, circuit.N, circuit.num_cbits or 0)
+    builder = BasicQisBuilder(module.builder)
 
     for op in circuit.gates:
         # If we have a QuTiP gate, then we need to convert it into one of
@@ -226,7 +220,7 @@ def circuit_to_qir(circuit, format, module_name="qutip_circuit"):
             f.write(bitcode)
         finally:
             f.close()
-        module = pqp.QirModule(f.name)
+        module = Module.from_bitcode(f.name)
         try:
             os.unlink(f.name)
         except:
