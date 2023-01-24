@@ -17,6 +17,7 @@ parts:
   - file: concepts/what-is-qir
   - file: concepts/why-do-we-need
   - file: concepts/using-qir
+  - file: concepts/hybrid-qir
   - file: reference/glossary
 
 - caption: Reference
