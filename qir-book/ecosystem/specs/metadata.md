@@ -1,0 +1,5 @@
+# Metadata
+
+In QIR, metadata refers to both LLVM metadata and attributes. Attributes are often preferred due to requirements from specific passes or the availability of existing LLVM attributes with desired semantics. Source languages allow attributes on callable and type definitions, such as in Q# where attributes are compile-time constant values with specific user-defined types.
+
+To represent attributes in LLVM, the compiler attaches metadata to callables or types. For callables, the metadata is linked to the LLVM global symbol for the implementation table. The metadata node starts with "!quantum." followed by the attribute's namespace-qualified name. However, LLVM does not allow metadata on structure definitions directly, so type attributes are represented as named metadata at the module level.

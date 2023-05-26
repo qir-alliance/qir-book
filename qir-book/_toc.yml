@@ -1,11 +1,26 @@
 format: jb-book
 root: index
 parts:
+
+- caption: Ecosystem
+  chapters:
+  - file: ecosystem/eco
+  - file: ecosystem/specs/specs
+    sections:
+    - file: ecosystem/specs/data-types
+    - file: ecosystem/specs/profile-target
+    - file: ecosystem/specs/runtime
+  - file: ecosystem/pyqir/pyqir
+
+
 - caption: Tutorials
   chapters:
-  - file: tutorials/qir-gen-qsharp/qsharp-magic
-    title: QIR with Q#
-  - file: tutorials/qir-python
+  - file: tutorials/generation
+    sections:
+    - file: tutorials/qir-emission/qsharp/in_jupyter/qsharp-magic
+    - file: tutorials/qir-emission/qutip/qir-gen
+    - file: tutorials/qir-emission/qiskit/qir-gen
+    - file: tutorials/qir-emission/pennylane/qir-gen
   - file: tutorials/qat-optimization
   - file: tutorials/visualize-qir
 
@@ -13,7 +28,8 @@ parts:
   chapters:
   - file: concepts/what-is-qir
   - file: concepts/why-do-we-need
-  - file: concepts/using-qir
+  - file: concepts/MLIR
+  - file: concepts/why-LLVM
   - file: reference/glossary
 
 - caption: Reference
