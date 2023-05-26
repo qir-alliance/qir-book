@@ -1,3 +1,16 @@
 
+# Overview
+The QIR ecosystem comprises multiple projects that collaborate to generate QIR, perform optimizations, lower it to target code, and facilitate simulations.[QIR specifications](qir-book/ecosystem/specs/specs.md) encompass a set of data type, subroutines, and runtime functionalities for acceptable compiled code from the source compiler. A subset of these specifications is used to define a profile for target machine, either quantum devices or simulators. If the source code is developed in a Pythonic framework, then [PyQIR](qir-book/ecosystem/pyqir/pyqir.md) APIs can be used to build the capabilities to lower the source code to QIR. Other development frameworks such as Q# have incorporated the intrinsic functionality to generate QIR. The figure below shows the components of the QIR ecosystem.
 
-The QIR ecosystem aims to provide interoperability for hybrid computation in the quantum computing field. It operates as a compiler system with front-end, middle end, and back-end abstraction layers to transform source code into target-machine code. It leverages the LLVM technologies and multi-level IR (MLIR) approach to facilitate compilation for different high-level code and low-level targets. Modern compilers take advantage of introducing new layers of abstraction in the middle end, dissolving traditional compiler phases. This new approach creates MLIR compiler systems. Tools and components that lower the instruction with MLIR approach can be reused for different source code and target machines. It was initially introduced for in machine learning workflows to facilitate compilation for co-processing. MLIR spans the abstraction levels from after source code to machine code generation, creating a space for compiler extensibility and reusability with different high-level languages and low-level targets.
+![alt text](eco-component.png)
+
+To add:
+QAT-
+QCOR-
+QIR Runner-
+NWQ-Sim-
+
+
+
+
+
