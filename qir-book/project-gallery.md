@@ -163,6 +163,26 @@ repo
 :expand:
 docs
 ```
+:::
+
+:::{grid-item-card}
+:padding: 2
+**🐣 qbraid-qir**
+^^^
+Python package providing support for QIR conversions, including Cirq to QIR.
++++
+```{button-link} https://github.com/qBraid/qbraid-qir
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://docs.qbraid.com/projects/qir/en/latest/
+:color: primary
+:outline:
+:expand:
+docs
+```
 
 ::::
 <!-- 
