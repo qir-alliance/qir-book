@@ -163,6 +163,26 @@ repo
 :expand:
 docs
 ```
+:::
+
+:::{grid-item-card}
+:padding: 2
+**🐣 qbraid-qir**
+^^^
+qBraid-SDK extension providing support for QIR conversions.
++++
+```{button-link} https://github.com/qBraid/qbraid-qir
+:color: primary
+:outline:
+:expand:
+repo
+```
+```{button-link} https://docs.qbraid.com/qir
+:color: primary
+:outline:
+:expand:
+docs
+```
 
 ::::
 <!-- 
